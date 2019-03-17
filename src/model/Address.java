@@ -21,4 +21,20 @@ public class Address {
     public void setState(String state){
         this.state = state;
     }
+
+    public String setStreet(){
+        return this.street;
+    }
+
+    public String setCity(){
+        return this.city;
+    }
+
+    public int setNum(){
+        return this.num;
+    }
+
+    public String setState(){
+        return this.state;
+    }
 }

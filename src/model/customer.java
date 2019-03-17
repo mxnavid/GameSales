@@ -35,4 +35,24 @@ public class customer {
     public void setPhone(int num){
         this.phoneNum = num;
     }
+
+    public String getPassword(){
+        return this.password;
+    }
+
+    public String setID(){
+        return this.ID;
+    }
+
+    public String setName(){
+        return this.name;
+    }
+
+    public Address setAddress(){
+        return this.address;
+    }
+
+    public int setPhone(){
+        return this.phoneNum;
+    }
 }
