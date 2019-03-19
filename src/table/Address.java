@@ -22,19 +22,19 @@ public class Address {
         this.state = state;
     }
 
-    public String setStreet(){
+    public String getStreet(){
         return this.street;
     }
 
-    public String setCity(){
+    public String getCity(){
         return this.city;
     }
 
-    public int setNum(){
+    public int getNum(){
         return this.num;
     }
 
-    public String setState(){
+    public String getState(){
         return this.state;
     }
 }

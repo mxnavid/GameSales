@@ -40,19 +40,19 @@ public class customer {
         return this.password;
     }
 
-    public String setID(){
+    public String getID(){
         return this.ID;
     }
 
-    public String setName(){
+    public String getName(){
         return this.name;
     }
 
-    public Address setAddress(){
+    public Address getAddress(){
         return this.address;
     }
 
-    public int setPhone(){
+    public int getPhone(){
         return this.phoneNum;
     }
 }
