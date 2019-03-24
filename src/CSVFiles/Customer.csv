@@ -1,5 +1,30 @@
-id,name,Username,password,Games Owned (United ID),Phone,Address
-1,Curry Ringsell,cringsell0@dedecms.com,yuHoP855Q,[2627000001],(256) 231-2900,"93 New Saddle Court La Crosse, WI 54601"
-2,Davida Hoyle,dhoyle1@slideshare.net,W5UK764,"[5249800001,6734000001,2627000002]",(334) 705-0152,"9867 Warren Ave. North Brunswick, NJ 08902"
-3,Berke Murrum,bmurrum2@furl.net,335hQ1Tna23v,[2627000001],(770) 838-9221,"9839 Brook St. Langhorne, PA 19047"
-4,Jamima Cattle,jcattle3@auda.org.au,pW2Bnf,[5249800002],(770) 502-0294,"5 Alton Avenue Lansdowne, PA 19050"
+id,name,Username,password,Street,City,State,Phone
+1,Curry Ringsell,cringsell0@dedecms.com,yuHoP855Q,400 Oxford Exchange Blvd,Oxford,AL,(256) 231-2900
+2,Davida Hoyle,dhoyle1@slideshare.net,W5UK764,2640 Enterprise Dr,Opelika,AL,(334) 705-0152
+3,Berke Murrum,bmurrum2@furl.net,335hQ1Tna23v,1129 S Park St,Carrollton,GA,(770) 838-9221
+4,Jamima Cattle,jcattle3@auda.org.au,pW2Bnf,555 Bullsboro Dr,Newnan,GA,(770) 502-0294
+5,Ahmed Mccoy,Donec.sollicitudin@Nunc.co.uk,EQL89CCT5AJ,250 S Colonial Dr,Peachtree City,Alabaster,(678) 954-4265
+6,Rooney Henry,risus.Quisque.libero@adipiscingenimmi.net,JVE47VXS0WA,3660 Marketplace Blvd,Montgomery,East Point,(770) 952-2241
+7,Daniel Mcgee,cursus@venenatis.net,RDA67AMK0UF,531 Brookwood Village,Douglasville,Homewood,(404) 260-0200
+8,Zenaida Cobb,sem@Donecestmauris.co.uk,GAW54VFX7WR,4125 Austell Rd,Prattville,Austell,(205) 565-3760
+9,Whoopi Randolph,erat.nonummy.ultricies@Phasellusfermentumconvallis.com,CRT27JTZ5WZ,5561 Grove Blvd,Birmingham,Birmingham,(770) 425-6895
+10,Margaret James,non.nisi.Aenean@feugiatplacerat.ca,ENJ04QKM7GU,2535 Dallas Hwy SW,Fayetteville,Marietta,(404) 720-1081
+11,Joel Tate,non@nonlorem.net,YIL61YNE4AE,3489 Lowery Pkwy,Birmingham,Fultondale,(770) 387-9595
+12,Amena Norton,velit.Aliquam@utcursusluctus.com,GAD56PID6ZB,3378 Cobb Pkwy NW,Hiram,Acworth,(404) 237-9494
+13,Magee Santiago,arcu@accumsanconvallisante.edu,PZQ30CGF6AZ,1850 Jonesboro Rd,Alabaster,Mcdonough,(404) 267-0060
+14,Jana Kaufman,Fusce@adipiscinglacusUt.org,NIP90DAU9QX,375 18th St,East Point,Atlanta,(678) 704-8120
+15,Ezra Workman,nascetur@aliquet.org,DLE03XGU8HW,2201 Cobb Pkwy SE,Homewood,Smyrna,(770) 240-0005
+16,Cheyenne Snider,parturient@vitae.com,ETA96KEZ2DJ,1275 Caroline St NE,Austell,Atlanta,(678) 494-5307
+17,Blossom Hunter,elementum@consectetueradipiscingelit.net,RPR46TTW8VF,4889 Promenade Pkwy,Birmingham,Bessemer,(770) 321-8545
+18,Graham Shannon,Quisque@vulputate.co.uk,IPE74LUP3XR,740 Ernest W Barrett Pkwy NW,Marietta,Kennesaw,(678) 259-0888
+19,McKenzie Warner,ac.metus.vitae@dolordapibusgravida.net,MRR86UAK5HK,2539 Piedmont Rd NE,Fultondale,Atlanta,(770) 270-5375
+20,Denise Pitts,turpis.non.enim@hendreritDonec.org,ILC12KJP3EC,100 Cherokee Pl,Acworth,Cartersville,(770) 998-0144
+21,Jasper Crawford,nulla@nequeetnunc.ca,VJX68APQ7GQ,3535 Peachtree Rd NE,Mcdonough,Atlanta,(770) 849-0885
+22,Nicholas Cox,sed.dui.Fusce@facilisiSedneque.edu,KRZ42YMA1CI,2400 N Druid Hills Rd NE,Atlanta,Atlanta,(770) 785-6470
+23,Ava Scott,eu@convalliserateget.ca,COS01ZOZ6ET,5570 Roswell Rd,Smyrna,Sandy Springs,(770) 664-5395
+24,Shellie Murphy,lacinia.orci.consectetuer@Donecsollicitudinadipiscing.co.uk,FAG98GOZ2GR,1401 Johnson Ferry Rd,Atlanta,Marietta,(678) 880-4311
+25,Renee Anderson,elit.a.feugiat@necmalesuadaut.co.uk,FTP46QLD9HK,140 Woodstock Square Ave,Bessemer,Woodstock,(770) 476-5548
+26,Gray Huffman,lacinia.at@Cumsociis.co.uk,HQJ53ARO1CC,3040 Shallowford Rd,Kennesaw,Marietta,(770) 225-1780
+27,Hope Ellis,magna@Phasellusinfelis.ca,VGY04NJM8JL,100 Perimeter Center Pl,Atlanta,Atlanta,(770) 736-1113
+28,Ali Gentry,posuere.enim@sociis.com,FWQ50CSF8WR,4241 Lavista Rd,Cartersville,Tucker,(678) 513-8013
+29,Kevin Robinson,rutrum@dapibusligulaAliquam.ca,MTV88VMG7PG,1135 Woodstock Rd,Atlanta,Roswell,(770) 338-4460
