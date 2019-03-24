@@ -19,11 +19,6 @@ public class VendorView extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Image storeLogo = new Image(getClass().getResourceAsStream("gamestop.jpg"));
-        ImageView logoView = new ImageView(storeLogo);
-        logoView.setFitWidth(SCENE_WIDTH);
-        logoView.setFitHeight(150);
-
         GridPane table = new GridPane();
         table.setMinSize(SCENE_WIDTH, SCENE_HEIGHT);
         table.setPadding(new Insets(10, 10, 10,10));
@@ -61,7 +56,6 @@ public class VendorView extends Application{
 
         VBox layout = new VBox();
         layout.setSpacing(5);
-        layout.getChildren().add(logoView);
         layout.getChildren().add(table);
 
         Scene purchaseView = new Scene(layout);

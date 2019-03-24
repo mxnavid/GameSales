@@ -31,15 +31,6 @@ public class PurchaseView extends Application{
         grid.setVgap(25);
         grid.setAlignment(Pos.CENTER);
 
-        Image cover = new Image(getClass().getResourceAsStream("marioCover.jpg"));
-        Image logo = new Image(getClass().getResourceAsStream("marioLogo.jpg"));
-        ImageView coverView = new ImageView(cover);
-        coverView.setFitHeight(220);
-        coverView.setFitWidth(150);
-        ImageView logoView = new ImageView(logo);
-        logoView.setFitHeight(150);
-        logoView.setFitWidth(150);
-
         Button homeButton = new Button("Home");
         homeButton.setPrefSize(150, 150);
         Button buyButton = new Button("Buy");
@@ -63,12 +54,10 @@ public class PurchaseView extends Application{
         gameInfo.getChildren().add(price);
         gameInfo.getChildren().add(location);
 
-        grid.add(logoView, 0, 0);
-        grid.add(homeButton, 2, 0);
-        grid.add(gameInfo, 1, 0);
-        grid.add(coverView, 0, 1);
-        grid.add(userInfo, 2, 1);
-        grid.add(buyButton, 1, 1);
+        grid.add(homeButton, 1, 0);
+        grid.add(gameInfo, 0, 0);
+        grid.add(userInfo, 1, 1);
+        grid.add(buyButton, 0, 1);
 
         Scene purchaseView = new Scene(grid);
         primaryStage.setTitle("Purchase View");
