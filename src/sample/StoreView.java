@@ -38,10 +38,6 @@ public class StoreView extends Application{
         horizKey.getChildren().add(games);
         horizKey.getChildren().add(stores);
         horizKey.getChildren().add(customers);
-        Image storeLogo = new Image(getClass().getResourceAsStream("gamestop.jpg"));
-        ImageView logoView = new ImageView(storeLogo);
-        logoView.setFitWidth(SCENE_WIDTH);
-        key.getChildren().add(logoView);
         key.getChildren().add(horizKey);
 
         GridPane table = new GridPane();
