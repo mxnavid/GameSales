@@ -65,6 +65,18 @@ public class PurchaseView extends Application{
         primaryStage.show();
     }
 
+    public void returnHome(){
+
+    }
+
+    public void buyGame(){
+
+    }
+
+    public void selectGame(){
+
+    }
+
     public static void main(String[] args) {
         launch(args);
     }

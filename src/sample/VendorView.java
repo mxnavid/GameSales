@@ -64,6 +64,10 @@ public class VendorView extends Application{
         primaryStage.show();
     }
 
+    public void selectGame(){
+
+    }
+
     public static void main(String[] args) {
         launch(args);
     }

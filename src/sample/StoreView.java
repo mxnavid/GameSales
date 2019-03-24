@@ -80,6 +80,22 @@ public class StoreView extends Application{
         primaryStage.show();
     }
 
+    public void resizeTable(){
+
+    }
+
+    public void gamesStoreTable(){
+
+    }
+
+    public void storeStoretabel(){
+
+    }
+
+    public void customerStoreTable(){
+
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
