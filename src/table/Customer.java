@@ -3,7 +3,7 @@ package table;
 import java.util.ArrayList;
 import java.util.List;
 
-public class customer {
+public class Customer {
     private String email;
     private String password;
     private String ID;
@@ -12,7 +12,7 @@ public class customer {
     private Address address;
     private int phoneNum;
 
-    public customer(String email){
+    public Customer(String email){
         this.email = email;
     }
 

@@ -1,12 +1,12 @@
 package table;
 
-public class store {
+public class Store {
     private int storeID;
     private Address address;
     private int phoneNum;
     private String userName;
 
-    public store(int storeID){
+    public Store(int storeID){
         this.storeID = storeID;
     }
 
