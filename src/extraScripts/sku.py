@@ -8,7 +8,7 @@ def fileWriter(st):
     file.close()
 
 def sky():
-    listRandom = random.sample(range(1.0,90000), 10)
+    listRandom = random.sample(range(1,51), 40)
     print(listRandom)
     for i in listRandom:
         fileWriter(i)
