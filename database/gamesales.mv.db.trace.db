@@ -1,0 +1,10 @@
+2019-04-07 14:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CUSTOMER
+VALUES (1,CURRY RINGSELL[*],CRINGSELL0@DEDECMS.COM,YUHOP855Q,400 OXFORD EXCHANGE BLVD,OXFORD,AL,(256) 231-2900) "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO CUSTOMER
+VALUES (1,Curry Ringsell,cringsell0@dedecms.com,yuHoP855Q,400 Oxford Exchange Blvd,Oxford,AL,(256) 231-2900) [42001-199]
+2019-04-07 14:39:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CUSTOMER
+VALUES (1,CURRY RINGSELL[*],CRINGSELL0@DEDECMS.COM,YUHOP855Q,400 OXFORD EXCHANGE BLVD,OXFORD,AL,2562312900) "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO CUSTOMER
+VALUES (1,Curry Ringsell,cringsell0@dedecms.com,yuHoP855Q,400 Oxford Exchange Blvd,Oxford,AL,2562312900) [42001-199]
