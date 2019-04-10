@@ -25,36 +25,6 @@ public class Utilities {
         return connection;
     }
 
-    public static void makeNewDatabase(Connection connection, String path, String username, String password) {
-        System.out.println("I am getting executed");
-        connect(connection, path, username, password);
-
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
-            StringBuilder component = new StringBuilder(); String line;
-            System.out.println(component);
-
-            while ((line = reader.readLine()) != null) {
-                // skip comments
-                if (line.startsWith("--")) continue;
-                component.append(line);
-
-                // found component, execute
-                if (line.endsWith(";")) {
-
-                    Statement statement = connection.createStatement();
-                    System.out.println(component);
-                    statement.execute(component.toString());
-                    component = new StringBuilder();
-                }
-            }
-            reader.close();
-
-        } catch (IOException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     /**
      * FillDataBase
      * Fills in all tables with information from a csv file.
@@ -82,7 +52,7 @@ public class Utilities {
             reader.readLine();
             while ((line = reader.readLine()) != null) {
                 String[] components = line.split(",");
-                customers.add(new Customer(Integer.parseInt(components[0]), components[1], components[2], components[3], components[4], components[5], components[6], components[7]));
+                customers.add(new Customer(Integer.parseInt(components[0]), components[1], components[2], components[3], components[4], components[5], components[6], components[7], components[8]));
             }
             reader.close();
 
@@ -100,9 +70,9 @@ public class Utilities {
     public static void addCustomer(Connection connection, Customer customer) {
         System.out.println("Adding Customer Called");
         String command = String.format("INSERT INTO CUSTOMER " +
-                "VALUES(\'%d\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\');",
+                "VALUES(\'%d\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\');",
                 customer.getId(), customer.getName(), customer.getUsername(), customer.getPassword(),
-                customer.getStreet(), customer.getCity(), customer.getCity(), customer.getState(), customer.getPhone());
+                customer.getStreet(), customer.getCity(), customer.getState(), customer.getPhone(), customer.getFrequentShopper());
         try { // execute command
             Statement st = connection.createStatement();
             st.execute(command);
@@ -110,7 +80,6 @@ public class Utilities {
             e.printStackTrace();
         }
     }
-
 
 
     public static void printCusomterTable(Connection connection) {
@@ -121,12 +90,12 @@ public class Utilities {
             ResultSet rs = st.executeQuery(command);
 
             while (rs.next()) {
-                System.out.printf("Customer %d: %s %s %s %s %s %s %s\n",
+                System.out.printf("Customer %d: %s %s %s %s %s %s %s %s \n",
                         rs.getInt(1),
                         rs.getString(2), rs.getString(3),
                         rs.getString(4), rs.getString(5),
                         rs.getString(6), rs.getString(7),
-                        rs.getString(8));
+                        rs.getString(8), rs.getString(9));
 
             }
 
@@ -136,6 +105,7 @@ public class Utilities {
     }
 
     public static void createGameTable(Connection connection, String fileName) throws SQLException {
+
 
     }
 

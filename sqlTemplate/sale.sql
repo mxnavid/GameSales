@@ -1,0 +1,7 @@
+CREATE TABLE sale
+(
+  saleID    INT PRIMARY KEY,
+  custEmail VARCHAR(255) NOT NULL,
+  StoreID   VARCHAR(255) NOT NULL,
+  gameSKU   VARCHAR(255) NOT NULL,
+);

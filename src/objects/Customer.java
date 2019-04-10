@@ -10,8 +10,9 @@ public class Customer {
     private String city;
     private String state;
     private String phone;
+    private String frequentShopper;
 
-    public Customer(int id, String name, String username, String password, String street, String city, String state, String phone) {
+    public Customer(int id, String name, String username, String password, String street, String city, String state, String phone, String frequentShopper) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -20,6 +21,7 @@ public class Customer {
         this.city = city;
         this.state = state;
         this.phone = phone;
+        this.frequentShopper = frequentShopper;
     }
 
 
@@ -31,4 +33,5 @@ public class Customer {
     public String getCity() { return city; }
     public String getState() { return state; }
     public String getPhone() { return phone; }
+    public String getFrequentShopper() { return frequentShopper; }
 }

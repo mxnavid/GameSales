@@ -1,0 +1,6 @@
+CREATE TABLE inventory
+(
+  storeID    INT PRIMARY KEY,
+  SKU VARCHAR(255) NOT NULL,
+  quantity  VARCHAR(255) NOT NULL,
+);
