@@ -4,55 +4,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
-    private String email;
-    private String password;
-    private String ID;
-    private List<String> games = new ArrayList<>();
+    private int ID;
     private String name;
-    private Address address;
-    private int phoneNum;
+    private String username;
+    private String password;
+    private String Street;
+    private String City;
+    private String state;
+    private String phone;
+    private String frequentShopper;
 
-    public Customer(String email){
-        this.email = email;
-    }
-
-    public void setPassword(String password){
-        this.password = password;
-    }
-
-    public void setID(String ID){
+    public Customer(int ID, String name, String username, String password, String street, String city, String state, String phone, String frequentShopper) {
         this.ID = ID;
-    }
-
-    public void setName(String name){
         this.name = name;
+        this.username = username;
+        this.password = password;
+        Street = street;
+        City = city;
+        this.state = state;
+        this.phone = phone;
+        this.frequentShopper = frequentShopper;
     }
 
-    public void setAddress(Address address){
-        this.address = address;
-    }
+    public int getID() { return ID; }
 
-    public void setPhone(int num){
-        this.phoneNum = num;
-    }
+    public String getName() { return name; }
 
-    public String getPassword(){
-        return this.password;
-    }
+    public String getUsername() { return username; }
 
-    public String getID(){
-        return this.ID;
-    }
+    public String getPassword() { return password; }
 
-    public String getName(){
-        return this.name;
-    }
+    public String getStreet() { return Street; }
 
-    public Address getAddress(){
-        return this.address;
-    }
+    public String getCity() { return City; }
 
-    public int getPhone(){
-        return this.phoneNum;
-    }
+    public String getState() { return state; }
+
+    public String getPhone() { return phone; }
+
+    public String getFrequentShopper() { return frequentShopper; }
 }

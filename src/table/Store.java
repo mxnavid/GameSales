@@ -2,39 +2,34 @@ package table;
 
 public class Store {
     private int storeID;
-    private Address address;
+    private String email;
+    private String Password;
+    private String Street;
+    private String City;
+    private String State;
     private int phoneNum;
-    private String userName;
 
-    public Store(int storeID){
+    public Store(int storeID, String email, String password, String street, String city, String state, int phoneNum) {
         this.storeID = storeID;
+        this.email = email;
+        Password = password;
+        Street = street;
+        City = city;
+        State = state;
+        this.phoneNum = phoneNum;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+    public int getStoreID() { return storeID; }
 
-    public void setPhoneNum(int num){
-        this.phoneNum = num;
-    }
+    public String getEmail() { return email; }
 
-    public void setUserName(String userName){
-        this.userName = userName;
-    }
+    public String getPassword() { return Password; }
 
-    public int getStoreID(){
-        return this.storeID;
-    }
+    public String getStreet() { return Street; }
 
-    public Address getAddress() {
-        return this.address;
-    }
+    public String getCity() { return City; }
 
-    public int getPhoneNum(){
-        return this.phoneNum;
-    }
+    public String getState() { return State; }
 
-    public String getUserName(){
-        return this.userName;
-    }
+    public int getPhoneNum() { return phoneNum; }
 }
