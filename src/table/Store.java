@@ -7,9 +7,9 @@ public class Store {
     private String Street;
     private String City;
     private String State;
-    private int phoneNum;
+    private String phoneNum;
 
-    public Store(int storeID, String email, String password, String street, String city, String state, int phoneNum) {
+    public Store(int storeID, String email, String password, String street, String city, String state, String phoneNum) {
         this.storeID = storeID;
         this.email = email;
         Password = password;
@@ -31,5 +31,5 @@ public class Store {
 
     public String getState() { return State; }
 
-    public int getPhoneNum() { return phoneNum; }
+    public String getPhoneNum() { return phoneNum; }
 }

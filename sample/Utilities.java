@@ -4,7 +4,6 @@ import table.Customer;
 import table.Game;
 import table.Store;
 import table.Vendor;
-import table.Store;
 import table.Restocking;
 
 import java.io.BufferedReader;
@@ -109,24 +108,7 @@ public class Utilities {
         }
     }
 
-    public static void createGameTable(Connection connection, String fileName) throws SQLException {
-        System.out.println("Create GameTable called");
-        List<Game> games = new ArrayList<Game>();
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
-            String line;
-            reader.readLine();
-            while ((line = reader.readLine()) != null) {
-                String[] components = line.split(",");
-                games.add(new Game(Integer.parseInt(components[0]), Integer.parseInt(components[1]), components[2], components[3], Integer.parseInt(components[4]), components[5], components[6], Double.parseDouble(components[7])));
-            }
-            reader.close();
-        } catch (IOException | NumberFormatException e) {
-            e.printStackTrace();
-
-        }
-    }
 
     public static void addGames(Connection connection, Game game) {
         System.out.println("Adding Customers Now");
@@ -143,17 +125,26 @@ public class Utilities {
         }
     }
 
-    public static void addStore(Connection connection, Store store) {
-        System.out.println("Adding Stores Now");
-        String command = String.format("INSERT INTO STORE" +
-                        "VALUES(\'%d\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\');",
-                store.getStoreID(), store.getEmail(), store.getPassword(), store.getStreet(), store.getCity(), store.getState(), store.getPhoneNum());
-        try {
-            Statement st = connection.createStatement();
-            st.execute(command);
 
-        } catch (SQLException e) {
+
+
+
+    public static void createGameTable(Connection connection, String fileName) throws SQLException {
+        System.out.println("Create GameTable called");
+        List<Game> games = new ArrayList<Game>();
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            reader.readLine();
+            while ((line = reader.readLine()) != null) {
+                String[] components = line.split(",");
+                games.add(new Game(Integer.parseInt(components[0]), Integer.parseInt(components[1]), components[2], components[3], Integer.parseInt(components[4]), components[5], components[6], Double.parseDouble(components[7])));
+            }
+            reader.close();
+        } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
+
         }
     }
 
@@ -176,8 +167,53 @@ public class Utilities {
         }
     }
 
-    
+    public static void createVendorTable(Connection connection, String fileName) throws SQLException{
+        System.out.println("Create Vandor Table");
+        List<Vendor> vendors = new ArrayList<Vendor>();
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            reader.readLine();
+            while ((line = reader.readLine())!= null){
+                String[] components = line.split(",");
+                vendors.add(new Vendor(Integer.parseInt(components[0]), components[1], components[2], components[3], components[4], components[5], components[6], components[7]));
+
+            }
+
+        }catch(IOException | NumberFormatException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void addStore(Connection connection, Store store) {
+        System.out.println("Adding Stores Now");
+        String command = String.format("INSERT INTO STORE" +
+                        "VALUES(\'%d\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\');",
+                store.getStoreID(), store.getEmail(), store.getPassword(), store.getStreet(), store.getCity(), store.getState(), store.getPhoneNum());
+        try {
+            Statement st = connection.createStatement();
+            st.execute(command);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void createStoreTable(Connection connection, String fileName) throws SQLException {
+        System.out.println("Create Store Table Executed");
+        List<Store> stores = new ArrayList<Store>();
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            reader.readLine();
+            while((line = reader.readLine()) != null){
+                String[] components = line.split(",");
+                stores.add(new Store(Integer.parseInt(components[0]),components[1], components[2], components[3], components[4], components[5], components[6]));
+            }
+        }catch(IOException | NumberFormatException e){
+            e.printStackTrace();
+        }
 
     }
 
