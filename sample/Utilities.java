@@ -36,9 +36,9 @@ public class Utilities {
     public static void fillDatabase(Connection connection) {
         try {
             createCustomerTable(connection, "src/CSVFiles/Customer.csv");
-//            createGameTable(connection, "Game.csv");
-//            createGameInstanceTable(connection, "GameInstance.csv");
-//            createStoreTable(connection, "Store.csv");
+            createGameTable(connection, "src/CSVFiles/Game.csv");
+            createVendorTable(connection, "src/CSVFiles/Vendor.csv");
+            createStoreTable(connection, "src/CSVFiles/Store.csv");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -110,9 +110,9 @@ public class Utilities {
 
 
 
-    public static void addGames(Connection connection, Game game) {
-        System.out.println("Adding Customers Now");
-        String command = String.format("INSERT INTO GAME" +
+    public static void addGames(Connection connection, Game game, int counter) {
+        System.out.printf("Adding Games Now %d \n", counter);
+        String command = String.format("INSERT INTO GAME " +
                         "VALUES(\'%d\', \'%d\', \'%s\', \'%s\', \'%d\', \'%s\', \'%s\', \'%f\')",
                 game.getSku(), game.getRank(), game.getName(), game.getPlatform(), game.getYear(), game.getGenre(), game.getVendor(),
                 game.getPrice());
@@ -139,6 +139,7 @@ public class Utilities {
             reader.readLine();
             while ((line = reader.readLine()) != null) {
                 String[] components = line.split(",");
+                System.out.println(components);
                 games.add(new Game(Integer.parseInt(components[0]), Integer.parseInt(components[1]), components[2], components[3], Integer.parseInt(components[4]), components[5], components[6], Double.parseDouble(components[7])));
             }
             reader.close();
@@ -146,12 +147,17 @@ public class Utilities {
             e.printStackTrace();
 
         }
+        for (int counter = 0; counter < games.size(); counter++){
+            addGames(connection, games.get(counter), counter);
+
+        }
+        System.out.println("Dont writing");
     }
 
 
-    public static void addVendor(Connection connection, Vendor vendor) {
-        System.out.println("Adding Vendors");
-        String command = String.format("INSERT INTO VENDOR" +
+    public static void addVendor(Connection connection, Vendor vendor, int counter) {
+        System.out.printf("Adding Vendors Counter = %d \n", counter);
+        String command = String.format("INSERT INTO VENDOR " +
                         "VALUES(\'%d\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\' )",
                 vendor.getID(), vendor.getEmail(), vendor.getPassword(), vendor.getName(), vendor.getStreet(), vendor.getCity(), vendor.getState(), vendor.getPhone());
 
@@ -184,11 +190,15 @@ public class Utilities {
         }catch(IOException | NumberFormatException e){
             e.printStackTrace();
         }
+
+        for (int counter = 0; counter < vendors.size(); counter++){
+            addVendor(connection, vendors.get(counter), counter);
+        }
     }
 
-    public static void addStore(Connection connection, Store store) {
-        System.out.println("Adding Stores Now");
-        String command = String.format("INSERT INTO STORE" +
+    public static void addStore(Connection connection, Store store, int counter) {
+        System.out.printf("Adding Stores Now counter = %d \n", counter);
+        String command = String.format("INSERT INTO STORE " +
                         "VALUES(\'%d\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\',  \'%s\');",
                 store.getStoreID(), store.getEmail(), store.getPassword(), store.getStreet(), store.getCity(), store.getState(), store.getPhoneNum());
         try {
@@ -213,6 +223,9 @@ public class Utilities {
             }
         }catch(IOException | NumberFormatException e){
             e.printStackTrace();
+        }
+        for (int counter = 0; counter < stores.size(); counter++){
+            addStore(connection, stores.get(counter), counter);
         }
 
     }

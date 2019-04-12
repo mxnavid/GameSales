@@ -1,4 +1,4 @@
-CREATE TABLE STORE(
+CREATE TABLE GAME(
   SKU      INT PRIMARY KEY,
   Ranking  VARCHAR(255) NOT NULL,
   Name     VARCHAR(255) NOT NULL,
@@ -8,3 +8,7 @@ CREATE TABLE STORE(
   Vendor   VARCHAR(255) NOT NULL,
   Price    VARCHAR(255) NOT NULL,
 );
+
+
+-- Sorting in ascending order
+select * from game order by RANKING+0

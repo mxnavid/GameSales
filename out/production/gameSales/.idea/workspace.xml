@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4128ec82-a8f4-4027-a796-01a8f0ebaa0b" name="Default" comment="Added all the tables, frequentShopper added on customer, made some information in customer optional.">
-      <change afterPath="$PROJECT_DIR$/src/table/inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/table/restocking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/table/sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/table/vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSVFiles/Vendor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSVFiles/Vendor.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/GameInstance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Store.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/table/game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/game.java" afterDir="false" />
+    <list default="true" id="4128ec82-a8f4-4027-a796-01a8f0ebaa0b" name="Default" comment="create Table function for all entities added">
+      <change beforePath="$PROJECT_DIR$/out/production/gameSales/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gameSales/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gameSales/database/gamesales.mv.db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gameSales/database/gamesales.mv.db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gameSales/sample/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gameSales/sample/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gameSales/table/game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gameSales/table/game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gameSales/table/store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gameSales/table/store.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,37 +41,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/game.java">
+        <entry file="file://$PROJECT_DIR$/src/Console_Front_End/ConsoleCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="4080">
+              <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+              <caret line="272" column="33" lean-forward="true" selection-start-line="272" selection-start-column="33" selection-end-line="272" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CSVFiles/inventory.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/Store.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/restocking.java">
+        <entry file="file://$PROJECT_DIR$/src/table/Restocking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/vendor.java">
+        <entry file="file://$PROJECT_DIR$/src/table/Vendor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="75">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -87,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="645">
               <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -97,19 +101,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/sale.java">
+        <entry file="file://$PROJECT_DIR$/src/table/Sale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/Inventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqlTemplate/customerTable.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/table/inventory.java">
+        <entry file="file://$PROJECT_DIR$/sample/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="993">
+              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#connect#0;class#Utilities#0" />
+                <element signature="method#addCustomer#0;class#Utilities#0" />
+                <element signature="method#printCusomterTable#0;class#Utilities#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,36 +163,33 @@
         <option value="$PROJECT_DIR$/src/sample/Utilities.java" />
         <option value="$PROJECT_DIR$/sqlTemplate/customerTable.sql" />
         <option value="$PROJECT_DIR$/src/objects/Customer.java" />
-        <option value="$PROJECT_DIR$/sample/Utilities.java" />
         <option value="$PROJECT_DIR$/sqlTemplate/game.sql" />
         <option value="$PROJECT_DIR$/sqlTemplate/vendor.sql" />
         <option value="$PROJECT_DIR$/sqlTemplate/store.sql" />
         <option value="$PROJECT_DIR$/sqlTemplate/sale.sql" />
         <option value="$PROJECT_DIR$/sqlTemplate/restocking.sql" />
         <option value="$PROJECT_DIR$/sqlTemplate/inventory.sql" />
-        <option value="$PROJECT_DIR$/src/table/game.java" />
-        <option value="$PROJECT_DIR$/src/table/Store.java" />
-        <option value="$PROJECT_DIR$/src/table/vendor.java" />
-        <option value="$PROJECT_DIR$/src/table/sale.java" />
         <option value="$PROJECT_DIR$/src/table/Customer.java" />
-        <option value="$PROJECT_DIR$/src/table/restocking.java" />
+        <option value="$PROJECT_DIR$/src/table/game.java" />
         <option value="$PROJECT_DIR$/src/table/inventory.java" />
+        <option value="$PROJECT_DIR$/src/table/restocking.java" />
+        <option value="$PROJECT_DIR$/src/table/sale.java" />
+        <option value="$PROJECT_DIR$/src/table/vendor.java" />
+        <option value="$PROJECT_DIR$/src/table/Store.java" />
+        <option value="$PROJECT_DIR$/sample/Utilities.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="845" />
     <option name="y" value="23" />
-    <option name="width" value="835" />
-    <option name="height" value="1027" />
+    <option name="width" value="1080" />
+    <option name="height" value="1897" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,12 +250,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554932775639" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555053768842" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -259,6 +286,20 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="ConsoleCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Console_Front_End.ConsoleCode" />
+      <module name="GameSales" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Console_Front_End.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -321,6 +362,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsoleCode" />
         <item itemvalue="Application.PurchaseView" />
         <item itemvalue="Application.StoreView" />
       </list>
@@ -353,7 +395,8 @@
       <workItem from="1553483211371" duration="94000" />
       <workItem from="1553486222325" duration="149000" />
       <workItem from="1554926355661" duration="3326000" />
-      <workItem from="1554931254375" duration="1392000" />
+      <workItem from="1554931254375" duration="5897000" />
+      <workItem from="1555051926409" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="Creates SQL Statements for tables, need to fix derived values liks Address. Uploaded CSV files with limited data">
       <created>1553231990814</created>
@@ -404,17 +447,31 @@
       <option name="project" value="LOCAL" />
       <updated>1554931416751</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added all the table files, addFunctions is added. need to do create table">
+      <created>1554935271316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554935271316</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create Table function for all entities added">
+      <created>1554948370711</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554948370711</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16285000" />
+    <option name="totallyTimeSpent" value="21421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1080" height="1897" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32957393" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1955684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -422,8 +479,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49807322" visible="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.0342246" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49807322" weight="0.03208556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.92435235" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8742369" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,8 +488,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993895" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.35225886" weight="0.34117648" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4990366" weight="0.32963988" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.35225886" weight="0.34093264" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4990366" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -447,7 +504,7 @@
       <window_info anchor="right" id="Maven" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32661784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1955684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -455,17 +512,17 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49807322" weight="0.32963988" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981685" weight="0.4513369" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49807322" weight="0.03208556" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4981685" visible="true" weight="0.92435235" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8742369" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993895" visible="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" visible="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.35225886" weight="0.34117648" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4990366" weight="0.32963988" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4993895" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.35225886" weight="0.34093264" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4990366" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -473,7 +530,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.01831502" />
+      <window_info anchor="right" id="Database" order="6" weight="0.01831502" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="SciView" order="9" />
@@ -491,10 +548,11 @@
     <MESSAGE value="restocking and sale csv" />
     <MESSAGE value="sku.csv script modified" />
     <MESSAGE value="Added all the tables, frequentShopper added on customer, made some information in customer optional." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all the tables, frequentShopper added on customer, made some information in customer optional." />
+    <MESSAGE value="added all the table files, addFunctions is added. need to do create table" />
+    <MESSAGE value="create Table function for all entities added" />
+    <option name="LAST_COMMIT_MESSAGE" value="create Table function for all entities added" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/table/gameInstance.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/69120691-b473-42a1-849a-1b3c8082c4c1/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -658,35 +716,9 @@
     <entry file="file://$PROJECT_DIR$/src/sample/restockingView.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Utilities.java" />
     <entry file="file://$PROJECT_DIR$/src/CSVFiles/sale.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CSVFiles/inventory.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="method#connect#0;class#Utilities#0" />
-            <element signature="method#createCustomerTable#0;class#Utilities#0" />
-            <element signature="method#addCustomer#0;class#Utilities#0" />
-            <element signature="method#printCusomterTable#0;class#Utilities#0" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlTemplate/game.sql">
@@ -721,13 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqlTemplate/customerTable.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -770,10 +795,10 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Customer.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -820,19 +845,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CSVFiles/restocking.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CSVFiles/Vendor.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-323">
           <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
@@ -849,44 +874,55 @@
     <entry file="file://$PROJECT_DIR$/src/sample/marioCover.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/Address.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Address.java" />
+    <entry file="file://$PROJECT_DIR$/src/objects/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/objects/Customer.java" />
+    <entry file="file://$PROJECT_DIR$/src/objects/GameInstance.java" />
+    <entry file="file://$PROJECT_DIR$/src/objects/Store.java" />
+    <entry file="file://$PROJECT_DIR$/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/CSVFiles/inventory.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/table/Store.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/GameInstance.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Restocking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Store.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Vendor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="645">
           <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -894,45 +930,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/game.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Sale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/restocking.java">
+    <entry file="file://$PROJECT_DIR$/src/table/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/vendor.java">
+    <entry file="file://$PROJECT_DIR$/sqlTemplate/customerTable.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/Store.java">
+    <entry file="file://$PROJECT_DIR$/src/Console_Front_End/ConsoleCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        <state relative-caret-position="4080">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+          <caret line="272" column="33" lean-forward="true" selection-start-line="272" selection-start-column="33" selection-end-line="272" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/sale.java">
+    <entry file="file://$PROJECT_DIR$/sample/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="993">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#connect#0;class#Utilities#0" />
+            <element signature="method#addCustomer#0;class#Utilities#0" />
+            <element signature="method#printCusomterTable#0;class#Utilities#0" />
+          </folding>
         </state>
       </provider>
     </entry>

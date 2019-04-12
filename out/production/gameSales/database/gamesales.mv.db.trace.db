@@ -255,3 +255,1387 @@ CREATE TABLE restocking
   SKU VARCHAR(255) NOT NULL,
   quantity  VARCHAR(255) NOT NULL,
 ) [42101-199]
+2019-04-12 03:24:48 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at sample.Utilities.connect(Utilities.java:24)
+	at sample.Main.init(Main.java:29)
+	at sample.Main.start(Main.java:56)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 27 more
+2019-04-12 03:24:59 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at sample.Utilities.connect(Utilities.java:24)
+	at sample.Main.init(Main.java:29)
+	at sample.Main.start(Main.java:56)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 27 more
+2019-04-12 03:25:09 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at sample.Utilities.connect(Utilities.java:24)
+	at sample.Main.init(Main.java:29)
+	at sample.Main.start(Main.java:56)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 27 more
+2019-04-12 03:25:34 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at sample.Utilities.connect(Utilities.java:24)
+	at sample.Main.init(Main.java:29)
+	at sample.Main.start(Main.java:56)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 27 more
+2019-04-12 03:27:22 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-04-12 03:38:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GAMEVALUES" not found; SQL statement:
+INSERT INTO GAMEVALUES('76096', '1', 'Wii Sports', 'Wii', '2006', 'Sports', 'Nintendo', '28.180000') [42102-199]
+2019-04-12 03:38:28 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-04-12 03:39:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "GAMES" not found; SQL statement:
+select * from games [42102-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('81614', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('81614', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('1897', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('1897', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('20450', '157', 'Assassin's Creed II', 'PS3', '2009', 'Action', 'Ubisoft', '64.450000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('20450', '157', 'Assassin's Creed II', 'PS3', '2009', 'Action', 'Ubisoft', '64.450000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('5142', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('5142', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40905', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40905', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('440', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('440', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('12275', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('12275', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('21338', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('21338', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37464', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37464', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11990', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11990', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('69698', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('69698', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('24121', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('24121', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('58879', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('58879', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('47927', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('47927', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('87993', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('87993', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('80567', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('80567', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11174', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11174', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6675', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6675', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('31265', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('31265', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('79351', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('79351', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('25626', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('25626', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('16590', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('16590', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22722', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22722', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22393', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22393', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('51151', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('51151', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('35350', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('35350', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6766', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6766', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('16311', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('16311', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('72944', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('72944', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55398', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55398', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11870', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11870', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('23797', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('23797', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('32303', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('32303', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('71435', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('71435', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('2684', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('2684', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('80781', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('80781', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('56927', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('56927', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('25494', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('25494', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('9092', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('9092', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('13203', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('13203', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('84818', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('84818', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22625', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22625', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('74499', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('74499', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('84600', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('84600', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('1139', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('1139', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('67473', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('67473', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('9013', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('9013', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('88063', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('88063', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('75168', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('75168', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37894', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37894', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('75506', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('75506', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('27627', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('27627', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('59540', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('59540', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('58644', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('58644', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('35371', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('35371', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('47193', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('47193', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('3518', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('3518', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('66463', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('66463', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('36080', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('36080', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55162', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55162', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40340', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40340', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('57878', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('57878', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('34579', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('34579', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('57237', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('57237', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('5791', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('5791', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('24396', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('24396', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('39150', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('39150', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22126', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22126', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000') [42000-199]
+2019-04-12 03:41:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('59986', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('59986', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000') [42000-199]
+2019-04-12 03:45:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('81614', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('81614', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000') [42000-199]
+2019-04-12 03:45:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('1897', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('1897', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000') [42000-199]
+2019-04-12 03:45:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('5142', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('5142', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000') [42000-199]
+2019-04-12 03:45:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40905', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40905', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000') [42000-199]
+2019-04-12 03:45:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('440', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('440', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('12275', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('12275', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('21338', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('21338', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37464', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37464', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11990', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11990', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('69698', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('69698', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('24121', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('24121', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('58879', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('58879', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('47927', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('47927', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('87993', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('87993', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('80567', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('80567', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11174', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11174', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6675', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6675', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('31265', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('31265', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('79351', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('79351', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('25626', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('25626', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('16590', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('16590', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22722', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22722', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22393', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22393', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('51151', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('51151', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('35350', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('35350', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6766', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6766', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('16311', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('16311', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('72944', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('72944', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55398', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55398', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11870', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11870', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('23797', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('23797', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('32303', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('32303', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('71435', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('71435', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('2684', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('2684', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('80781', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('80781', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('56927', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('56927', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('25494', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('25494', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('9092', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('9092', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('13203', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('13203', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('84818', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('84818', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22625', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22625', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('74499', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('74499', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('84600', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('84600', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('1139', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('1139', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('67473', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('67473', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('9013', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('9013', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('88063', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('88063', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('75168', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('75168', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37894', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37894', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('75506', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('75506', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('27627', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('27627', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('59540', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('59540', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('58644', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('58644', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('35371', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('35371', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('47193', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('47193', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('3518', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('3518', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('66463', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('66463', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('36080', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('36080', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55162', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55162', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40340', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40340', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('57878', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('57878', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('34579', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('34579', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('57237', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('57237', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('5791', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('5791', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('24396', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('24396', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('39150', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('39150', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22126', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22126', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000') [42000-199]
+2019-04-12 03:45:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('59986', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('59986', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000') [42000-199]
+2019-04-12 03:45:36 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-04-12 03:53:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STORE" already exists; SQL statement:
+CREATE TABLE STORE(
+  SKU      INT PRIMARY KEY,
+  Ranking  VARCHAR(255) NOT NULL,
+  Name     VARCHAR(255) NOT NULL,
+  Platform VARCHAR(255) NOT NULL,
+  Year     VARCHAR(255) NOT NULL,
+  Genre    VARCHAR(255) NOT NULL,
+  Vendor   VARCHAR(255) NOT NULL,
+  Price    VARCHAR(255) NOT NULL,
+) [42101-199]
+2019-04-12 03:54:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60046', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60046', '116', 'Uncharted 3: Drake's Deception', 'PS3', '2011', 'Action', 'Sony Computer Entertainment', '22.800000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6113', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6113', '129', 'Assassin's Creed III', 'PS3', '2012', 'Action', 'Ubisoft', '98.230000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40056', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40056', '159', 'Assassin's Creed', 'X360', '2007', 'Adventure', 'Ubisoft', '56.160000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('36866', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('36866', '173', 'Assassin's Creed III', 'X360', '2012', 'Action', 'Ubisoft', '54.780000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60809', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60809', '177', 'Assassin's Creed II', 'X360', '2009', 'Action', 'Ubisoft', '74.650000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('63667', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('63667', '187', 'Donkey Kong Country 2: Diddy's Kong Quest', 'SNES', '1995', 'Platform', 'Nintendo', '56.370000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55941', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55941', '191', 'Kirby's Dream Land', 'GB', '1992', 'Platform', 'Nintendo', '73.970000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('17263', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('17263', '202', 'Tony Hawk's Pro Skater', 'PS', '1999', 'Sports', 'Activision', '22.520000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('24688', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('24688', '206', 'Link's Crossbow Training', 'Wii', '2007', 'Shooter', 'Nintendo', '63.740000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('26359', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('26359', '210', 'Uncharted: Drake's Fortune', 'PS3', '2007', 'Action', 'Sony Computer Entertainment', '46.890000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('12381', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('12381', '218', 'Assassin's Creed', 'PS3', '2007', 'Adventure', 'Ubisoft', '25.500000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('12367', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('12367', '225', 'Tony Hawk's Pro Skater 2', 'PS', '2000', 'Sports', 'Activision', '91.340000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('63863', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('63863', '234', 'Luigi's Mansion: Dark Moon', '3DS', '2013', 'Action', 'Nintendo', '53.280000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('19628', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('19628', '248', 'Tony Hawk's Pro Skater 3', 'PS2', '2001', 'Sports', 'Activision', '72.630000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60292', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60292', '263', 'Assassin's Creed: Revelations', 'PS3', '2011', 'Action', 'Ubisoft', '31.340000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('3743', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('3743', '271', 'Uncharted 4: A Thief's End', 'PS4', '2016', 'Shooter', 'Sony Computer Entertainment', '90.970000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('38741', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('38741', '273', 'Assassin's Creed: Revelations', 'X360', '2011', 'Action', 'Ubisoft', '26.880000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('19417', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('19417', '282', 'Super Mario World 2: Yoshi's Island', 'SNES', '1995', 'Platform', 'Nintendo', '29.620000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60230', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60230', '304', 'Assassin's Creed: Unity', 'PS4', '2014', 'Action', 'Ubisoft', '92.720000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('50171', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('50171', '306', 'Tony Hawk's Underground', 'PS2', '2003', 'Sports', 'Activision', '26.140000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('51475', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('51475', '307', 'Assassin's Creed IV: Black Flag', 'PS3', '2013', 'Action', 'Ubisoft', '22.170000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('19734', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('19734', '318', 'The Legend of Zelda: Link's Awakening', 'GB', '1992', 'Action', 'Nintendo', '94.210000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('62091', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('62091', '319', 'Mario & Luigi: Bowser's Inside Story', 'DS', '2009', 'Role-Playing', 'Nintendo', '87.860000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55960', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55960', '325', 'Resident Evil Director's Cut', 'PS', '1996', 'Action', 'Virgin Interactive', '90.180000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55855', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55855', '330', 'Harry Potter and the Sorcerer's Stone', 'PS', '2001', 'Action', 'Electronic Arts', '40.540000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('16891', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('16891', '339', 'Tony Hawk's Pro Skater 4', 'PS2', '2002', 'Sports', 'Activision', '76.490000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6934', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6934', '351', 'Tom Clancy's The Division', 'PS4', '2016', 'Shooter', 'Ubisoft', '25.730000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('32635', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('32635', '356', 'Luigi's Mansion', 'GC', '2001', 'Action', 'Nintendo', '67.620000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('34629', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('34629', '368', 'Spyro 2: Ripto's Rage!', 'PS', '1999', 'Platform', 'Sony Computer Entertainment', '86.290000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40086', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40086', '372', 'Donkey Kong Country 3: Dixie Kong's Double Trouble!', 'SNES', '1996', 'Platform', 'Nintendo', '22.060000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('34761', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('34761', '373', 'Assassin's Creed: Brotherhood', 'X360', '2010', 'Action', 'Ubisoft', '62.040000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('59430', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('59430', '380', 'Assassin's Creed: Unity', 'XOne', '2014', 'Action', 'Ubisoft', '52.680000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22547', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22547', '397', 'The Legend of Zelda: Majora's Mask', 'n64', '2000', 'Action', 'Nintendo', '44.020000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55479', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55479', '400', 'Assassin's Creed IV: Black Flag', 'X360', '2013', 'Action', 'Ubisoft', '56.290000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('68681', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('68681', '408', 'Assassin's Creed Syndicate', 'PS4', '2015', 'Action', 'Ubisoft', '62.770000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60962', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60962', '462', 'Tom Clancy's Splinter Cell', 'XB', '2002', 'Action', 'Ubisoft', '32.640000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('28934', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('28934', '463', 'Mike Tyson's Punch-Out!!', 'NES', '1987', 'Fighting', 'Nintendo', '31.990000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('58755', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('58755', '489', 'Super Mario World 2: Yoshi's Island', 'GBA', '2002', 'Platform', 'Nintendo', '45.630000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('30261', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('30261', '507', 'Yoshi's Story', 'n64', '1997', 'Platform', 'Nintendo', '49.020000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('27962', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('27962', '509', 'Skylanders: Spyro's Adventure', 'Wii', '2011', 'Action', 'Activision', '98.170000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('55178', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('55178', '511', 'Assassin's Creed: Brotherhood', 'PS3', '2010', 'Action', 'Ubisoft', '86.660000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('47944', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('47944', '523', 'Yoshi's Island DS', 'DS', '2006', 'Platform', 'Nintendo', '39.840000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('15754', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('15754', '526', 'A Bug's Life', 'PS', '1998', 'Platform', 'Sony Computer Entertainment', '78.870000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('6254', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('6254', '543', 'Assassin's Creed IV: Black Flag', 'PS4', '2013', 'Action', 'Ubisoft', '55.290000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('35329', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('35329', '567', 'Tom Clancy's Splinter Cell', 'PS2', '2003', 'Action', 'Ubisoft', '94.180000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('64842', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('64842', '629', 'The Sims: Bustin' Out', 'PS2', '2003', 'Simulation', 'Electronic Arts', '27.070000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('63352', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('63352', '631', 'Tom Clancy's Rainbow Six: Vegas 2', 'X360', '2008', 'Shooter', 'Ubisoft', '51.820000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('40381', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('40381', '660', 'Tony Hawk's Underground 2', 'PS2', '2004', 'Sports', 'Activision', '54.380000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('61968', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('61968', '663', 'Kirby's Dream Land 2', 'GB', '1995', 'Platform', 'Nintendo', '76.360000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('46024', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('46024', '673', 'The Legend of Zelda: Majora's Mask 3D', '3DS', '2015', 'Action', 'Nintendo', '22.670000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('1688', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('1688', '699', 'Sonic's Ultimate Genesis Collection', 'PS3', '2009', 'Misc', 'Sega', '75.730000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60558', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60558', '706', 'Onimusha 2: Samurai's Destiny', 'PS2', '2002', 'Adventure', 'Capcom', '22.940000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('2192', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('2192', '720', 'The Legend of Zelda: Link's Awakening DX', 'GB', '1998', 'Adventure', 'Nintendo', '82.450000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('7622', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('7622', '723', 'Assassin's Creed IV: Black Flag', 'XOne', '2013', 'Action', 'Ubisoft', '68.010000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37702', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37702', '724', 'Devil May Cry 3: Dante's Awakening Special Edition', 'PS2', '2006', 'Action', 'Capcom', '94.640000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('575', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('575', '731', 'High School Musical: Makin' the Cut!', 'DS', '2007', 'Puzzle', 'Disney Interactive Studios', '83.550000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('4741', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('4741', '735', 'Kirby's Pinball Land', 'GB', '1992', 'Misc', 'Nintendo', '48.850000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('22583', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('22583', '750', 'Tom Clancy's Rainbow Six: Siege', 'PS4', '2015', 'Shooter', 'Ubisoft', '94.940000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('54104', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('54104', '765', 'Kirby's Epic Yarn', 'Wii', '2010', 'Platform', 'Nintendo', '52.600000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('65796', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('65796', '770', 'Tony Hawk's Pro Skater', 'n64', '2000', 'Sports', 'Activision', '43.480000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('15943', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('15943', '781', 'Devil May Cry 3: Dante's Awakening', 'PS2', '2005', 'Action', 'Capcom', '95.930000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('25871', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('25871', '806', 'Tom Clancy's Splinter Cell: Conviction', 'X360', '2010', 'Action', 'Ubisoft', '94.640000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('65288', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('65288', '824', 'Peter Jackson's King Kong: The Official Game of the Movie', 'PS2', '2005', 'Action', 'Ubisoft', '95.880000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('37371', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('37371', '836', 'Tom Clancy's The Division', 'XOne', '2016', 'Shooter', 'Ubisoft', '73.800000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('43414', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('43414', '861', 'Tom Clancy's Rainbow Six: Vegas', 'X360', '2006', 'Shooter', 'Ubisoft', '40.200000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('26392', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('26392', '874', 'Tom Clancy's Ghost Recon', 'PS2', '2002', 'Shooter', 'Ubisoft', '80.540000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('11138', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('11138', '889', 'The Sims: Makin' Magic', 'PC', '2003', 'Simulation', 'Electronic Arts', '98.050000') [42000-199]
+2019-04-12 03:54:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO GAME VALUES('60104', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000[*]')"; SQL statement:
+INSERT INTO GAME VALUES('60104', '932', 'Demon's Souls', 'PS3', '2009', 'Role-Playing', 'Namco Bandai Games', '29.510000') [42000-199]
+2019-04-12 03:55:04 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-04-12 03:55:13 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:126)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 20 more
+2019-04-12 03:55:18 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:126)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 20 more
+2019-04-12 03:55:22 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:126)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 20 more
+2019-04-12 03:56:30 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 24 more
+2019-04-12 03:58:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM GAME ORDER BY RANKING DSC[*] "; SQL statement:
+select * from game order by RANKING DSC [42000-199]
+2019-04-12 04:17:15 database: wrong user or password; user: "ADMIN"
+org.h2.message.DbException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:126)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 20 more
+2019-04-12 04:42:02 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at sample.Utilities.connect(Utilities.java:24)
+	at sample.Main.init(Main.java:29)
+	at sample.Main.start(Main.java:56)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mxnavid/Desktop/spring2019/cs320/project/GameSales/database/gamesales.mv.db.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 27 more
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('1', 'apaulichce@wiley.com', 'JbasAAym9', 'Nintendo', '5959 Poplar Ave', 'Memphis', 'TN', '(901) 261-5079' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('2', 'rwhatmancf@miibeian.gov.cn', 'iyV4RuFdmATt', 'Microsoft Game Studios', '2823 Wilma Rudolph Blvd', 'Clarksville', 'TN', '(931) 645-8007' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('3', 'bcaltuncg@whitehouse.gov', 'sUcGWLFRFdo', 'Take-Two Interactive', '601 Colonial Rd', 'Memphis', 'TN', '(901) 685-9240' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('4', 'jpeoplesch@economist.com', 's4FpCqo4Dc', 'Sony Computer Entertainment', '7255 Interstate Dr', 'Horn Lake', 'MS', '(662) 349-1585' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('5', 'ljergci@answers.com', 'h6QeNU0TXD', 'Activision', '160 American Ave', 'Bowling Green', 'KY', '(270) 842-0013' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('6', 'dmeineckcj@reference.com', '6WCTUcn', 'Ubisoft', '170 Promenade Blvd', 'Flowood', 'MS', '(601) 919-1415' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('7', 'fmansourck@creativecommons.org', '5gsM1cxN', 'Bethesda Softworks', '6365 I 55 N', 'Jackson', 'MS', '(601) 956-1150' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('8', 'ksabycl@google.ru', 'EE06GXZgaa', 'Electronic Arts', '3000 E Highland Dr', 'Jonesboro', 'AR', '(870) 934-9661' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('9', 'mmacalpinecm@squarespace.com', 'IsPaUeuHt', 'Sega', '6143 U S Highway 98', 'Hattiesburg', 'MS', '(601) 261-5298' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('10', 'fjorrycn@dailymail.co.uk', 'YnS5pW', 'SquareSoft', '5151 Frederica St', 'Owensboro', 'KY', '(270) 686-7033' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('11', 'ppeartreeco@cargocollective.com', '4kHTYwEnKv', 'Atari', '1631 Ring Rd', 'Elizabethtown', 'KY', '(270) 769-6402' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO VENDORVALUES('12', 'rohairecp@nifty.com', 'j66DJn16wx1V', '505 Games', '3867 Promenade Pkwy', 'D'iberville', 'MS', '(228) 233-3301[*]' )"; SQL statement:
+INSERT INTO VENDORVALUES('12', 'rohairecp@nifty.com', 'j66DJn16wx1V', '505 Games', '3867 Promenade Pkwy', 'D'iberville', 'MS', '(228) 233-3301' ) [42000-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('13', 'btottmancq@tinyurl.com', 'BGLNpW8Lip', 'Capcom', '69320 Highway 21', 'Covington', 'LA', '(985) 871-7093' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('14', 'arabbattscr@bloglovin.com', 'yxhIK0', 'GT Interactive', '2030 Hammond Square Dr', 'Hammond', 'LA', '(985) 277-3203' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('15', 'abergeoncs@etsy.com', 'AXAfG5', 'Konami Digital Entertainment', '4103 Pecanland Mall Dr', 'Monroe', 'LA', '(318) 361-3781' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('16', 'jgeevesct@pcworld.com', 'BaTTPh', 'Sony Computer Entertainment Europe', '4500 Veterans Memorial Blvd', 'Metairie', 'LA', '(504) 888-2184' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('17', 'vpeartcu@hhs.gov', 'F4wKSKAQ', 'Square Enix', '1401 W Esplanade Ave', 'Kenner', 'LA', '(504) 617-4859' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('18', 'pgillbeycv@github.io', 'ESYquTBUp', 'LucasArts', '1731 Manhattan Blvd', 'Harvey', 'LA', '(504) 227-2014' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('19', 'khanselmancw@last.fm', 'txqOaMFi54X', 'Virgin Interactive', '2001 Millerville Rd', 'Baton Rouge', 'LA', '(225) 272-4275' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('20', 'pfauntcx@netscape.com', 'xWBIiQJGZ', 'Warner Bros. Interactive Entertainment', '6885 Siegen Ln', 'Baton Rouge', 'LA', '(225) 293-0984' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('21', 'dbilovuscy@shareasale.com', 'HQre4I', 'Universal Interactive', '6625 E Lloyd Expy', 'Evansville', 'IN', '(812) 402-8500' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('22', 'agliddercz@boston.com', 'vyOlKXQZ', 'Eidos Interactive', '4000 1st Ave', 'Evansville', 'IN', '(812) 426-2218' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('23', 'rmacrieried0@tripadvisor.com', 'w65JDIb', 'RedOctane', '202 Siemers Dr', 'Cape Girardeau', 'MO', '(573) 339-1778' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('24', 'cdumbrilld1@hibu.com', 'csBZla', 'Vivendi Games', '7311 Jefferson Blvd', 'Louisville', 'KY', '(502) 964-1053' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('25', 'fhinemoord2@creativecommons.org', 'VJu93vrSD', 'Enix Corporation', '3000 W Deyoung St', 'Marion', 'IL', '(618) 997-8174' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('26', 'cespinozad3@wikimedia.org', 'wrCMP28J', 'Namco Bandai Games', '3600 Mall Rd', 'Louisville', 'KY', '(502) 456-6768' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('27', 'etealed4@google.ru', 'hDi93tKNGg3i', 'Palcom', '4640 Taylorsville Rd', 'Louisville', 'KY', '(502) 493-8717' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('28', 'osealyd5@npr.org', 'jP7KhM', 'Hasbro Interactive', '4174 Westport Rd', 'Louisville', 'KY', '(502) 992-1039' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('29', 'caubind6@house.gov', 'snOlnRK', 'THQ', '2209 State St', 'New Albany', 'IN', '(812) 945-5046' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('30', 'oserotd7@123-reg.co.uk', 'SVocAh9V', 'Fox Interactive', '12975 Shelbyville Rd', 'Louisville', 'KY', '(502) 992-1237' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('31', 'jbampkind8@amazonaws.com', 'vMZ1ZCmB', 'Acclaim Entertainment', '1125 Veterans Pkwy', 'Clarksville', 'IN', '(812) 284-4524' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('32', 'cbroomd9@youku.com', 'UVBTZQaZg', 'MTV Games', '4101 Towne Center Dr', 'Louisville', 'KY', '(502) 326-9185' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('33', 'ltoeda@buzzfeed.com', 'Vjs6ScBQ', 'Disney Interactive Studios', '131 West Reynolds Rd', 'Lexington', 'KY', '(859) 273-9403' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('34', 'mblooddb@canalblog.com', 'y6eCcmq0A', 'Majesco Entertainment', '1940 Pavillon Way', 'Lexington', 'KY', '(859) 263-7448' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('35', 'vhauchdc@nbcnews.com', 'zZzcP03', 'Codemasters', '3970 SW Archer Rd', 'Gainesville', 'FL', '(352) 376-5260' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('36', 'kkemmerdd@de.vu', 'Rm8AgGsdLosv', 'Red Orb', '250 NW 13th St', 'Gainesville', 'FL', '(352) 415-4861' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('37', 'truoffde@stanford.edu', 'Ae66A85sRe', 'Level 5', '1727 Martin Luther King Jr Blvd', 'Houma', 'LA', '(985) 223-2575' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('38', 'nbeadf@ft.com', 'SgriZNmlUMnN', 'Arena Entertainment', '3225 Louisiana Ave', 'Lafayette', 'LA', '(337) 769-7515' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('39', 'bstoyledg@wiley.com', 'lwTNeyV0Tn9l', 'Midway Games', '4313 Ambassador Caffery Pkwy', 'Lafayette', 'LA', '(337) 406-2536' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('40', 'shornbuckledh@amazon.com', 'TsuT5Tb', 'JVC', '9525 Crosshill Blvd', 'Jacksonville', 'FL', '(904) 248-4366' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('41', 'rhubballdi@com.com', 'xUsDdsh', 'Deep Silver', '200 Glynn Isle', 'Brunswick', 'GA', '(912) 261-4868' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('42', 'juccelidj@gnu.org', 'TWAx9PDl', '989 Studios', '6331 Roosevelt Blvd', 'Jacksonville', 'FL', '(904) 596-1065' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('43', 'psongistdk@trellian.com', 'vzh2PKAX7s8', 'NCSoft', '463737 State Rd 200', 'Yulee', 'FL', '(904) 548-1240' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('44', 'mdoubravadl@instagram.com', 'bxuMfn', 'UEP Systems', '1490 County Rd 220', 'Orange Park', 'FL', '(904) 278-8652' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('45', 'goverstalldm@geocities.com', 'rNLajZL7', 'Parker Bros.', '10490 San Jose Blvd', 'Jacksonville', 'FL', '(904) 268-4334' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('46', 'fpondjonesdn@seesaa.net', 'IfnWj6ow', 'Maxis', '444 Monument Rd', 'Jacksonville', 'FL', '(904) 721-4909' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('47', 'habrahartdo@unc.edu', 'iCz90AB', 'Imagic', '4567 River City Dr', 'Jacksonville', 'FL', '(904) 596-0020' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('48', 'mgwynethdp@umich.edu', '8JCjmlJKIeS', 'Tecmo Koei', '9041 Southside Blvd', 'Jacksonville', 'FL', '(904) 464-0043' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('49', 'irupertodq@about.me', 'cwvnkrzGRywv', 'Valve Software', '2000 SW College Rd', 'Ocala', 'FL', '(352) 629-1333' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('50', 'lhanselaz@paypal.com', 'ANNo9nV4Wy3b', 'ASCII Entertainment', '12300 Seal Beach Blvd', 'Seal Beach', 'CA', '(562) 596-9887' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('51', 'gshawb0@exblog.jp', 'gu2cIPwSlsBW', 'Mindscape', '1240 Broadway', 'Chula Vista', 'CA', '(619) 425-3850' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('52', 'galderseyb1@dailymail.co.uk', 'ACPhV2', 'Infogrames', '5700 Firestone Blvd', 'South Gate', 'CA', '(562) 806-2911' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('53', 'orennoldsb2@diigo.com', 'z3SwK7FerL2', 'Unknown', '2195 Glendale Galleria', 'Glendale', 'CA', '(818) 334-1400' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('54', 'astrankb3@prnewswire.com', 'F7ePhrApUBW', 'Square', '5760 E 7TH ST', 'Long Beach', 'CA', '(562) 343-9142' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('55', 'flegalleb4@slashdot.org', 'tdfNAC', 'Valve', '2270 N Bellflower Blvd', 'Long Beach', 'CA', '(562) 493-5411' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('56', 'gpetersb5@cargocollective.com', 'dXP8pzxdNDe', 'Activision Value', '141 Lakewood Center Mall', 'Lakewood', 'CA', '(562) 894-0019' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('57', 'lmurcuttb6@comsenz.com', 'lCLZyownNFp', 'Banpresto', '950 E 33rd St', 'Signal Hill', 'CA', '(562) 427-7751' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('58', 'jdodgeb7@xinhuanet.com', 'OzU4zIh', 'D3Publisher', '6750 Cherry Ave', 'Long Beach', 'CA', '(562) 295-2971' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('59', 'pgouchb8@hp.com', 'k5J1oL3s', 'Oxygen Interactive', '1621 S Alameda St', 'Compton', 'CA', '(310) 735-0096' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('60', 'fmoohanb9@csmonitor.com', '4bI042Bu9Vyv', 'Red Storm Entertainment', '1701 N Gaffey St', 'San Pedro', 'CA', '(310) 507-6289' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('61', 'wswaileba@qq.com', 'v2XRgltm', 'Video System', '20700 S Avalon Blvd', 'Carson', 'CA', '(310) 819-3011' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('62', 'hmanwellbb@pinterest.com', 'd8AVFe8qw', 'Hello Games', '651 W Sepulveda Blvd', 'Carson', 'CA', '(310) 507-0020' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('63', 'mcawtherabc@sogou.com', 'CPxcJn73JUuJ', 'Global Star', '2169 W Redondo Beach Blvd', 'Gardena', 'CA', '(310) 327-0762' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('64', 'eclooneybd@thetimes.co.uk', 'ZbEfJc', 'Gotham Games', '3433 Sepulveda Blvd', 'Torrance', 'CA', '(310) 214-1561' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('65', 'bdudbridgebe@t.co', 'ZN5mBJ', 'Westwood Studios', '2700 W 120th St', 'Hawthorne', 'CA', '(323) 492-1000' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('66', 'ericardoubf@networksolutions.com', 'ps7aZJ', 'GungHo', '735 S Figueroa St', 'Los Angeles', 'CA', '(213) 330-4543' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('67', 'wlamanbybg@cnn.com', 'CE8kT8rD', 'Crave Entertainment', '1601 Kingsdale Ave', 'Redondo Beach', 'CA', '(310) 750-0003' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('68', 'dlepiscopibh@nymag.com', 'ngSIHk', 'Hudson Soft', '3131 S HOOVER ST STE 1910', 'LOS ANGELES', 'CA', '(213) 275-3149' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('69', 'awybournebi@flickr.com', 'YMnwwHrFR', 'Coleco', '3471 W Century Blvd', 'Inglewood', 'CA', '(310) 677-2436' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('70', 'eboolebj@vistaprint.com', 'u1D7mbz', 'Rising Star Games', '620 S Virgil Ave Ste 100', 'Los Angeles', 'CA', '(213) 296-3712' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('71', 'frobbbk@zimbio.com', 'O2fE5mFL', 'Atlus', '1200 N Sepulveda Blvd', 'Manhattan Beach', 'CA', '(310) 546-5601' ) [42102-199]
+2019-04-12 04:42:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VENDORVALUES" not found; SQL statement:
+INSERT INTO VENDORVALUES('72', 'uhardsbl@t-online.de', 'wixs6VXb51LZ', 'TDK Mediactive', '3535 S La Cienega Blvd', 'Los Angeles', 'CA', '(310) 895-1131' ) [42102-199]
+2019-04-12 04:42:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO VENDOR VALUES('12', 'rohairecp@nifty.com', 'j66DJn16wx1V', '505 Games', '3867 Promenade Pkwy', 'D'iberville', 'MS', '(228) 233-3301[*]' )"; SQL statement:
+INSERT INTO VENDOR VALUES('12', 'rohairecp@nifty.com', 'j66DJn16wx1V', '505 Games', '3867 Promenade Pkwy', 'D'iberville', 'MS', '(228) 233-3301' ) [42000-199]

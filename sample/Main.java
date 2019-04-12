@@ -27,7 +27,7 @@ public class Main extends Application {
 
         if (databaseFile.exists()) {
             connection = Utilities.connect(connection, databaseFile.getAbsolutePath(), username, password);
-            Utilities.fillDatabase(connection);
+//            Utilities.fillDatabase(connection);
             System.out.println("exists");
         } else {
 //            System.out.println("Else statement is getting executed");
@@ -35,7 +35,7 @@ public class Main extends Application {
             System.out.println("doesn't exist");
         }
 
-        Utilities.printCusomterTable(connection);
+//        Utilities.printCusomterTable(connection);
 
         //SwingUtilities.invokeLater(() -> {
             //viewManager = new ViewManager();
