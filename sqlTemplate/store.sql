@@ -7,3 +7,5 @@ CREATE TABLE GAME(
                      State    VARCHAR(255) NOT NULL,
                      PhoneNumber   VARCHAR(255) NOT NULL
   );
+
+select storeid from store where email = 'jchasles3@ucsd.edu'

@@ -12,3 +12,5 @@ CREATE TABLE GAME(
 
 -- Sorting in ascending order
 select * from game order by RANKING+0
+
+select * from game where price between 20.00 and 50.00
