@@ -275,4 +275,8 @@ public class Utilities {
 
     }
 
+    public static void filterTable(Connection connection, String tbName, String cName, String filter){
+        String command = "select * from " + tbName + " where " +cName + " =" + "'"+filter+"'";
+        executeSQLCommand(connection, command);
+    }
 }

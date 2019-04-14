@@ -4,6 +4,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.sql.Connection;
 import java.util.Scanner;
+import java.util.*;
 
 public class Main extends Application {
 
@@ -25,6 +26,7 @@ public class Main extends Application {
     private static String password;
     private static String inputtedUser;
     private static String inputtedPassword;
+
 
     public void init(String username, String passwords) {
         this.username = username;
@@ -81,70 +83,107 @@ public class Main extends Application {
                     String input2 = "";
                     while(!input2.equals("/back")){
                         System.out.println("Vendor Menu\n");
-                        System.out.println("1: View stats \n/back: to go back");
-                        input2 = s.nextLine().toLowerCase();
-                        switch(input2){
-                            case "1":
-                                System.out.println("Vendor Menu/Stats");
-                                //SQL statements for vendor stats here
+                        System.out.println("Enter username: ");
+                        inputtedUser = s.nextLine();
+                        String usernameCmd = "select Email from vendor where Email = '" + inputtedUser +"'";
+                        if (!Utilities.getStringValue(connection, usernameCmd).equals(inputtedUser)){
+                            System.out.println("Vendor not found, type in username again");
+                            break;
                         }
+                        System.out.println("Enter password: ");
+                        inputtedPassword = s.nextLine();
+                        String passwordCMD = "select password from vendor where password ='"+ inputtedPassword +"'";
+                        if (Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
+                            System.out.println("1: View stats \n/back: to go back");
+                            input2 = s.nextLine().toLowerCase();
+                            switch(input2){
+                                case "1":
+                                    System.out.println("Vendor Menu/Stats");
+                                    //SQL statements for vendor stats here
+                            }
+                        }
+
                     }
                     break;
                 case "3":
-                    System.out.println("Enter username: ");
+                    System.out.println("Enter your store login email: ");
                     inputtedUser = s.nextLine();
+                    String usernameCmd = "select Email from store where Email = '" + inputtedUser +"'";
+                    if (!Utilities.getStringValue(connection, usernameCmd).equals(inputtedUser)){
+                        System.out.println("Store Account not found, type in the credentials again");
+                        break;
+                    }
                     System.out.println("Enter password: ");
                     inputtedPassword = s.nextLine();
-                    if(true){
+                    String passwordCMD = "select password from store where password ='"+ inputtedPassword +"'";
+
+                    if(Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
                         String input5 = "";
-                        while(!input5.equals("9")){
+                        while(!input5.equals("6")){
                             System.out.println("Restock Menu\n");
-                            System.out.println("1: Filters \n2: Search game \n3: Add to cart \n4: List cart \n5: Buy cart " +
-                                    "\n6: Remove game from cart \n7: Customer info \n8: Vendor info \n9: Back");
+                            System.out.println("1: Restock Your Store \n2: See your Inventory \n3: Checkout a Customer \n4: See Customer Information \n5: Vendor info \n6: Back");
                             input5 = s.nextLine();
                             switch(input5) {
                                 case "1":
                                     String input51 = "";
                                     while(!input51.equals("6")){
                                         System.out.println("Restock Menu/Filters\n");
-                                        System.out.println("1: Genre \n2: Price \n3: System \n4: Rating \n5: Year " +
+                                        System.out.println("1: Genre \n2: Price \n3: Platform \n4: Ranking \n5: Year Ascending Order " +
                                                 "\n6: Back");
                                         input51 = s.nextLine();
                                         switch(input51) {
                                             case "1":
                                                 System.out.println("Restock Menu/Filters/Genre\n");
+                                                System.out.println("Genres available = Action, Shooter, Puzzle, Role-Playing, Misc, Simulation, Racing, Adventure, Strategy, Fighting.");
                                                 System.out.println("Enter a genre: ");
-                                                String genre = "";
-                                                genre = filterScanner.nextLine();
-                                                //SQL statements
+                                                List<String> Genres = Arrays.asList("Action", "Shooter", "Puzzle", "Role-PLaying", "Misc", "Simulation", "Racing", "Adventure", "Strategy", "Fighting");
+
+                                                String genreInput = filterScanner.nextLine();
+                                                if (!Genres.contains(genreInput)) {
+                                                    System.out.println("Not valid Genre");
+                                                    break;
+                                                }
+                                                Utilities.filterTable(connection, "Game", "Genre", genreInput);
+
                                                 break;
                                             case "2":
-                                                System.out.println("Restock Menu/Filters/Price\n");
-                                                System.out.println("Enter a price: ");
-                                                String price = "";
-                                                price = filterScanner.nextLine();
-                                                //SQL statements
+                                                System.out.println("Restock Menu/Filters/Price Range\n");
+                                                System.out.println("Enter a Price Lower Limit Integers: ");
+                                                String priceLow = filterScanner.nextLine();
+
+                                                System.out.println("Enter Price High Limit Integers: ");
+                                                String priceHigh = filterScanner.nextLine();
+                                                String priceCommand = "select * from game where price between " + priceLow+".00 and "+ priceHigh+".00";
+                                                Utilities.executeSQLCommand(connection, priceCommand);
                                                 break;
                                             case "3":
-                                                System.out.println("Restock Menu/Filters/System\n");
-                                                System.out.println("Enter a system: ");
-                                                String system = "";
-                                                system = filterScanner.nextLine();
-                                                //SQL statements
+                                                System.out.println("Restock Menu/Filters/Platform\n");
+
+                                                System.out.println("Systems available = XOne, X360, GBA, DS, PSP, SNES, PS3, PS2, NES, PSV, GC, Wii, PC, PS, SCD, N64, PS4, XB, 2600, 3DS, GEN, WiiU, GB");
+                                                System.out.println("Enter a Platform: ");
+                                                List<String> Platforms = Arrays.asList("XOne", "X360", "GBA", "DS", "PSP", "SNES", "PS3", "PS2", "NES", "PSV", "GC", "Wii", "PC", "PS", "SCD", "N64", "PS4", "XB", "2600", "3DS", "GEN", "WiiU", "GB");
+                                                String platform = filterScanner.nextLine();
+                                                if (!Platforms.contains(platform)) {
+                                                    System.out.println("Not valid Platform");
+                                                    break;
+                                                }
+                                                Utilities.filterTable(connection, "Game", "Platform", platform);
                                                 break;
                                             case "4":
-                                                System.out.println("Restock Menu/Filters/Rating\n");
-                                                System.out.println("Enter a rating: ");
-                                                String rating = "";
-                                                rating = filterScanner.nextLine();
+                                                System.out.println("Restock Menu/Filters/Ranking in Ascending Order\n");
+                                                Utilities.executeSQLCommand(connection, "select * from game order by RANKING+0");
                                                 //SQL statements
                                                 break;
                                             case "5":
                                                 System.out.println("Restock Menu/Filters/Year\n");
                                                 System.out.println("Enter a year: ");
-                                                String year = "";
-                                                year = filterScanner.nextLine();
-                                                //SQL statements
+                                                System.out.println("Enter the Starting");
+                                                String yearBeg = filterScanner.nextLine();
+
+                                                System.out.println("Enter Ending Year:  ");
+                                                String yearEnd = filterScanner.nextLine();
+                                                String yearCommand = "select * from game where year between " + yearBeg+" and "+ yearEnd;
+                                                Utilities.executeSQLCommand(connection, yearCommand);
                                                 break;
                                         }
                                     }
@@ -215,14 +254,14 @@ public class Main extends Application {
                 case "5":
                     System.out.println("Enter username: ");
                     inputtedUser = s.nextLine();
-                    String usernameCmd = "select username from customer where username = '" + inputtedUser +"'";
+                    usernameCmd = "select username from customer where username = '" + inputtedUser +"'";
                     if (!Utilities.getStringValue(connection, usernameCmd).equals(inputtedUser)){
                         System.out.println("User not found, type in username again");
                         break;
                     }
                     System.out.println("Enter password: ");
                     inputtedPassword = s.nextLine();
-                    String passwordCMD = "select password from customer where password ='"+ inputtedPassword +"'";
+                    passwordCMD = "select password from customer where password ='"+ inputtedPassword +"'";
                     if (Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
                         String input5 = "";
                         while(!input5.equals("8")){
