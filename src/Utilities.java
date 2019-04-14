@@ -1,5 +1,3 @@
-package sample;
-
 import table.Customer;
 import table.Game;
 import table.Store;
@@ -14,6 +12,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.locks.StampedLock;
 
 public class Utilities {
 
@@ -35,10 +34,10 @@ public class Utilities {
      */
     public static void fillDatabase(Connection connection) {
         try {
-            createCustomerTable(connection, "src/CSVFiles/Customer.csv");
-            createGameTable(connection, "src/CSVFiles/Game.csv");
-            createVendorTable(connection, "src/CSVFiles/Vendor.csv");
-            createStoreTable(connection, "src/CSVFiles/Store.csv");
+            createCustomerTable(connection, "CSVFiles/Customer.csv");
+            createGameTable(connection, "CSVFiles/Game.csv");
+            createVendorTable(connection, "CSVFiles/Vendor.csv");
+            createStoreTable(connection, "CSVFiles/Store.csv");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -85,7 +84,6 @@ public class Utilities {
         }
     }
 
-
     public static void printCusomterTable(Connection connection) {
         String command = "SELECT * FROM Customer;";
 
@@ -108,8 +106,6 @@ public class Utilities {
         }
     }
 
-
-
     public static void addGames(Connection connection, Game game, int counter) {
         System.out.printf("Adding Games Now %d \n", counter);
         String command = String.format("INSERT INTO GAME " +
@@ -124,10 +120,6 @@ public class Utilities {
             e.printStackTrace();
         }
     }
-
-
-
-
 
     public static void createGameTable(Connection connection, String fileName) throws SQLException {
         System.out.println("Create GameTable called");
@@ -153,7 +145,6 @@ public class Utilities {
         }
         System.out.println("Dont writing");
     }
-
 
     public static void addVendor(Connection connection, Vendor vendor, int counter) {
         System.out.printf("Adding Vendors Counter = %d \n", counter);
@@ -233,6 +224,55 @@ public class Utilities {
     public static void log(String prefix, String message) {
         String time = String.format("("+ prefix+ ") [%1$tH:%1$tM:%1$tS] ", new Date());
         System.out.println(time + message);
+    }
+
+    public static ResultSet executeSQLCommand(Connection connection, String command){
+        try{
+            Statement st = connection.createStatement();
+
+            if (st.execute(command)){
+                ResultSet rs = st.executeQuery(command);
+                DBTablePrinter.printResultSet(rs);
+                return rs;
+            }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static int counter(Connection connection, String command){
+        try{
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(command);
+            rs.next();
+
+            int value = rs.getInt("rowCount");
+            return value;
+
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public static String getStringValue(Connection connection, String command){
+
+        //select username from customer where username = 'you@me.com'
+
+        try{
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(command);
+            while (rs.next()){
+                return (rs.getString(1));
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return "invalid";
+
     }
 
 }

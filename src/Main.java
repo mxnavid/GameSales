@@ -1,9 +1,23 @@
-package Console_Front_End;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-import java.sql.SQLOutput;
+import java.io.File;
+import java.sql.Connection;
 import java.util.Scanner;
 
-public class ConsoleCode {
+public class Main extends Application {
+
+    private static final File databaseFile = new File("database/gamesales.mv.db");
+    private static final File databasePath = new File("database/gamesales.sql");
+
+    private static Main driver;
+    private Connection connection;
+
+    private String username = "admin";
+    private String passwords = "password";
+
+
+
     private static String input = "-2";
     private static Scanner s = new Scanner(System.in);
     private static Scanner filterScanner = new Scanner(System.in);
@@ -12,7 +26,32 @@ public class ConsoleCode {
     private static String inputtedUser;
     private static String inputtedPassword;
 
-    public static void main(String[] args){
+    public void init(String username, String passwords) {
+        this.username = username;
+        this.passwords = passwords;
+
+        if (databaseFile.exists()) {
+            connection = Utilities.connect(connection, databaseFile.getAbsolutePath(), username, passwords);
+//            Utilities.fillDatabase(connection);
+        } else {
+////            Utilities.makeNewDatabase(connection, databasePath.getAbsolutePath(), username, password);
+        }
+
+//        Utilities.printCusomterTable(connection);
+
+    }
+
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+
+//        System.out.println("I am test");
+
+        // initialize database connection elements
+        init("admin", "password");
+
+        driver = this;
+
         System.out.println("Welcome to GameStop! Login or Create an Account. (-1 to exit)");
         while(!(input.equals("0"))){
             System.out.println("Main Menu\n");
@@ -21,11 +60,22 @@ public class ConsoleCode {
             switch(input){
                 case "1":
                     String input1 = "";
-                    while(!input1.equals("/back")){
-                        System.out.println("Admin Menu\n");
-                        System.out.println("Input an SQL statement: (/back to go back)");
-                        input1 = s.nextLine().toLowerCase();
+                    String pswd = "";
+                    System.out.println("What is your password?");
+                    pswd = s.nextLine();
+                    if (pswd.equals("password")){
+                        while(!input1.equals("/back")){
+                            System.out.println("Admin Menu\n");
+                            System.out.println("Input an SQL statement: (/back to go back)");
+                            input1 = s.nextLine().toLowerCase();
+
+                            if (!input1.equals("/back"))Utilities.executeSQLCommand(connection, input1);
+                        }
                     }
+                    else{
+                        System.out.println("Wrong Admin Password, try again!");
+                    }
+
                     break;
                 case "2":
                     String input2 = "";
@@ -154,21 +204,31 @@ public class ConsoleCode {
                     break;
                 case "4":
                     System.out.println("Enter new username: ");
-                    user = s.nextLine();
+                    user = "'" + s.nextLine() + "'";
                     System.out.println("Enter new password: ");
-                    password = s.nextLine();
+                    password = "'"+ s.nextLine() + "'";
+                    int customerCounter = Utilities.counter(connection, "SELECT COUNT(*) AS rowCount FROM customer");
+                    customerCounter = customerCounter+1;
+                    String customerSignUp = "INSERT INTO CUSTOMER VALUES(" + customerCounter + ", 'null', " + user + ", " + password + ", 'null', 'null','null', 'null', 'false')";
+                    Utilities.executeSQLCommand(connection, customerSignUp);
                     break;
                 case "5":
                     System.out.println("Enter username: ");
                     inputtedUser = s.nextLine();
+                    String usernameCmd = "select username from customer where username = '" + inputtedUser +"'";
+                    if (!Utilities.getStringValue(connection, usernameCmd).equals(inputtedUser)){
+                        System.out.println("User not found, type in username again");
+                        break;
+                    }
                     System.out.println("Enter password: ");
                     inputtedPassword = s.nextLine();
-                    if(true){
+                    String passwordCMD = "select password from customer where password ='"+ inputtedPassword +"'";
+                    if (Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
                         String input5 = "";
                         while(!input5.equals("8")){
                             System.out.println("Customer Menu\n");
                             System.out.println("1: Filters \n2: Search game \n3: Add to cart \n4: List cart \n5: Buy cart " +
-                                "\n6: Remove game from cart \n7: Customer info \n8: Back");
+                                    "\n6: Remove game from cart \n7: Customer info \n8: Back");
                             input5 = s.nextLine();
                             switch(input5) {
                                 case "1":
@@ -268,10 +328,16 @@ public class ConsoleCode {
                     break;
             }
         }
-    }
 
-    public void butMenuDisplay(){
-        System.out.println("1: Filters \n2: Search game \n3: List cart \n4: Buy cart \n5: Remove game from cart \n-1: Exit\n");
 
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    // getters and setters
+    public static Main getDriver() { return driver; }
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
 }
