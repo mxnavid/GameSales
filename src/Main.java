@@ -1,25 +1,14 @@
-import javafx.application.Application;
-import javafx.stage.Stage;
-
-import javax.xml.crypto.dom.DOMCryptoContext;
 import java.io.File;
 import java.sql.Connection;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.*;
 
-public class Main extends Application {
+public class Main {
 
     private static final File databaseFile = new File("database/gamesales.mv.db");
     private static final File databasePath = new File("database/gamesales.sql");
 
-    private static Main driver;
-    private Connection connection;
-
-    private String username = "admin";
-    private String passwords = "password";
-
-
+    private static Connection connection;
 
     private static String input = "-2";
     private static Scanner s = new Scanner(System.in);
@@ -30,31 +19,18 @@ public class Main extends Application {
     private static String inputtedPassword;
 
 
-    public void init(String username, String passwords) {
-        this.username = username;
-        this.passwords = passwords;
-
-        if (databaseFile.exists()) {
-            connection = Utilities.connect(connection, databaseFile.getAbsolutePath(), username, passwords);
-//            Utilities.fillDatabase(connection);
-        } else {
-////            Utilities.makeNewDatabase(connection, databasePath.getAbsolutePath(), username, password);
-        }
-
-//        Utilities.printCusomterTable(connection);
+    public static void init() {
+        connection = Utilities.connect(connection, databaseFile.getAbsolutePath(), "admin", "password");
+        //Utilities.printCusomterTable(connection);
 
     }
 
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
+    public static void main(String[] args) {
 
 //        System.out.println("I am test");
 
         // initialize database connection elements
-        init("admin", "password");
-
-        driver = this;
+        init();
 
         System.out.println("Welcome to GameStop! Login or Create an Account. (-1 to exit)");
         while(!(input.equals("0"))){
@@ -475,13 +451,4 @@ public class Main extends Application {
 
 
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    // getters and setters
-    public static Main getDriver() { return driver; }
-    public String getUsername() { return username; }
-    public String getPassword() { return password; }
 }
