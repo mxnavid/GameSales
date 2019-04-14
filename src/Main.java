@@ -59,7 +59,7 @@ public class Main extends Application {
         System.out.println("Welcome to GameStop! Login or Create an Account. (-1 to exit)");
         while(!(input.equals("0"))){
             System.out.println("Main Menu\n");
-            System.out.println("1: Admin \n2: Vendor \n3: Store  \n4: Customer Sign-up \n5: Customer Login \n0: Exit\n");
+            System.out.println("1: Admin \n2: Vendor \n3: Store  \n4: Customer Sign-up \n5: Customer Login \n 0: Exit\n");
             input = s.nextLine();
             switch(input){
                 case "1":
@@ -79,8 +79,10 @@ public class Main extends Application {
                     else{
                         System.out.println("Wrong Admin Password, try again!");
                     }
-
                     break;
+
+
+
                 case "2":
 
                     String input2 = "";
@@ -97,7 +99,7 @@ public class Main extends Application {
                         inputtedPassword = s.nextLine();
                         String passwordCMD = "select password from vendor where password ='"+ inputtedPassword +"'";
                         if (Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
-                            System.out.println("1: View stats \n2: Update Information\n/back: to go back");
+                            System.out.println("1: View stats \n2: View Information\n/back: to go back");
                             while (input2!= "/back") {
                                 input2 = s.nextLine().toLowerCase();
                                 switch (input2) {
@@ -108,9 +110,8 @@ public class Main extends Application {
                                         Utilities.executeSQLCommand(connection, "select * from restocking where vendorID='" + vendorID + "' ORDER BY ID DESC");
                                         break;
                                     case "2":
-                                        System.out.println("Change vendor information");
-                                        // sql and input goes here
-                                        System.out.println("");
+                                        System.out.println("View vendor information");
+                                        Utilities.executeSQLCommand(connection, "select * from vendor where email= '"+inputtedUser+"'");
                                         break;
                                 }
                             }
@@ -118,6 +119,8 @@ public class Main extends Application {
 
                     }
                     break;
+
+
                 case "3":
                     System.out.println("Enter your store login email: ");
                     inputtedUser = s.nextLine();
@@ -132,8 +135,8 @@ public class Main extends Application {
 
                     if(Utilities.getStringValue(connection, passwordCMD).equals(inputtedPassword)){
                         String input5 = "";
-                        while(!input5.equals("6")){
-                            System.out.println("1: Get Game Info for Restocking \n2: Restocking \n3: See your Inventory \n4: Checkout a Customer \n5: See Customer Information \n6: Vendor Info \n7: Back");
+                        while(!input5.equals("8")){
+                            System.out.println("1: Get Game Info for Restocking \n2: Restocking \n3: See your Inventory \n4: Checkout a Customer \n5: See Customer Information \n6: Vendor Info \n7: Enroll To Frequent Shopper Program \n8: Back");
                             input5 = s.nextLine();
                             switch(input5) {
                                 case "1":
@@ -212,6 +215,7 @@ public class Main extends Application {
                                                 String skuCommand = "select * from game where sku = '" + skuInput+"'";
                                                 Utilities.executeSQLCommand(connection, skuCommand);
                                                 break;
+
                                         }
                                     }
                                     break;
@@ -230,8 +234,6 @@ public class Main extends Application {
                                     int quantityEntered = Integer.parseInt(s.nextLine());
 
 
-
-
                                     String vendorName = Utilities.getStringValue(connection, "select vendor from game where sku= '"+skuInteger+"'");
                                     int vendorID = Integer.parseInt(Utilities.getStringValue(connection, "select id from vendor where name = '"+vendorName + "'"));
 
@@ -244,9 +246,6 @@ public class Main extends Application {
 
                                     System.out.println("Restocking Successful");
                                     Utilities.executeSQLCommand(connection, "select * from inventory where sku = '"+skuInteger+"' and storeid = '" + storeID +"'" );
-
-
-
 
                                     break;
 
@@ -318,19 +317,33 @@ public class Main extends Application {
 
                                 case "5":
                                     System.out.println("See Customer Information");
+                                    System.out.println("Please type in Customer Email: ");
+                                    String cashierPuttingCustEmail = s.nextLine();
+                                    Utilities.executeSQLCommand(connection,"select * from customer where username= '"+cashierPuttingCustEmail+"'");
                                     break;
-
 
                                 case "6":
                                     System.out.println("See Vendor Information");
+                                    System.out.println("Please type in Vendors Name: ");
+                                    String vendorNameInput = s.nextLine();
+                                    Utilities.executeSQLCommand(connection, "select * from vendor where name = '"+vendorNameInput + "'" );
                                     break;
-
+                                case "7":
+                                    System.out.println("Enroll Customer To Frequent Shopper Programs");
+                                    System.out.println("Whats the customer email: ");
+                                    String emailFreq = s.nextLine();
+                                    Utilities.executeSQLCommand(connection, "update customer set frequentShopper = 'TRUE' where username = '"+ emailFreq+"'");
+                                    System.out.println("Enrollment Successful");
+                                    Utilities.executeSQLCommand(connection, "select * from customer where username = '"+ emailFreq+"'");
+                                    break;
                             }
                         }
                     } else {
                         System.out.println("Invalid username or password.");
                     }
                     break;
+
+
                 case "4":
                     System.out.println("Enter new username: ");
                     user = "'" + s.nextLine() + "'";
@@ -340,7 +353,9 @@ public class Main extends Application {
                     customerCounter = customerCounter+1;
                     String customerSignUp = "INSERT INTO CUSTOMER VALUES(" + customerCounter + ", 'null', " + user + ", " + password + ", 'null', 'null','null', 'null', 'false')";
                     Utilities.executeSQLCommand(connection, customerSignUp);
+                    System.out.println("Successfully registered the customer");
                     break;
+
                 case "5":
                     System.out.println("Enter username: ");
                     inputtedUser = s.nextLine();

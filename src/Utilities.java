@@ -279,4 +279,10 @@ public class Utilities {
         String command = "select * from " + tbName + " where " +cName + " =" + "'"+filter+"'";
         executeSQLCommand(connection, command);
     }
+
+//    public static void updateValue(Connection connection, String tableName, String columnName, String value, String condition){
+//        String update = "UPDATE '" + tableName + "' SET '" + columnName + "' = '" + value + "' where " + condition
+//    }
 }
+
+
