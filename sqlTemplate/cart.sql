@@ -1,5 +1,5 @@
 CREATE TABLE cart(
-                   salesID      INT PRIMARY KEY,
+                   salesID      BIGINT PRIMARY KEY,
                    sku VARCHAR(255),
                    quantity     VARCHAR(255),
 

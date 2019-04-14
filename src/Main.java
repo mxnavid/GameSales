@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import javax.xml.crypto.dom.DOMCryptoContext;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLOutput;
@@ -265,9 +266,6 @@ public class Main extends Application {
 
                                     long salesID = System.currentTimeMillis();
 
-                                    forGettingid = "select storeid from store where email= '" + inputtedUser + "'";
-                                    storeID = Integer.parseInt(Utilities.getStringValue(connection, forGettingid));
-
 
                                     System.out.println("Whats the customer's email: ");
                                     System.out.println("If no email, type none");
@@ -275,14 +273,44 @@ public class Main extends Application {
                                     if (cusEmail.equals("none")){
                                          customerEmail = "null";
                                     }
+                                    else{
+                                        customerEmail = cusEmail;
+                                    }
+                                    forGettingid = "select storeid from store where email= '" + inputtedUser + "'";
+                                    storeID = Integer.parseInt(Utilities.getStringValue(connection, forGettingid));
+                                    double Price = 0;
+                                    List<Integer> quantites = new ArrayList<>();
+                                    List<Integer> subtractedQ = new ArrayList<>();
+                                    List<Integer> sku = new ArrayList<>();
+                                    String inputq = s.nextLine();
+                                    while(!inputq.equals("done")){
+                                        System.out.println("Enter the SKU Number: ");
+                                        int enteredSKU = Integer.parseInt(s.nextLine());
+                                        System.out.println("Enter the Quantity: ");
+                                        int enteredQuantity = Integer.parseInt(s.nextLine());
+                                        String addCart = "insert into cart values ('"+salesID +"','" + enteredSKU + "','"+ enteredQuantity +"')";
+                                        Utilities.executeSQLCommand(connection, addCart);
+                                        double tempPrice = Double.parseDouble(Utilities.getStringValue(connection, "select price from game where sku='"+enteredSKU+"'"));
+                                        Price = Price + (tempPrice*enteredQuantity);
+                                        quantites.add(Integer.parseInt(Utilities.getStringValue(connection, "select quantity from inventory where sku = '"+enteredSKU+"' and storeid = '" + storeID +"'")));
+                                        subtractedQ.add(enteredQuantity);
+                                        sku.add(enteredSKU);
+                                        System.out.println("Press any key to continue or type done if no more game need to be added");
+                                        inputq = s.nextLine();
+                                    }
+                                    if (Utilities.getStringValue(connection, "select frequentShopper from customer where username='"+customerEmail+"'").equals("TRUE")){
+                                        Price = Price*0.8;
+                                    }
+                                    String finalSale = "insert into sale values('"+salesID+"','"+customerEmail +"','"+storeID+"','"+Price+"')";
+                                    Utilities.executeSQLCommand(connection, finalSale);
 
-                                    System.out.println("Enter SKU Of the Game you are selling: ");
-                                    skuInteger = Integer.parseInt(s.nextLine());
+                                    for (int counter = 0; counter < quantites.size(); counter++){
 
+                                        String updateQCommand = "update inventory set quantity='"+(quantites.get(counter)-subtractedQ.get(counter))+"' where sku= '"+ sku.get(counter)+"' and storeid = '"+ storeID +"'";
+                                        Utilities.executeSQLCommand(connection, updateQCommand);
+                                    }
 
-
-
-
+                                    System.out.println("Sales Successful, confirmation number: " + salesID);
                                     break;
 
 

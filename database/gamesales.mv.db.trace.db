@@ -3055,3 +3055,48 @@ select * from restocking where vendor='khanselmancw@last.fm' ORDER BY ID DESC [4
 	at java.base/java.security.AccessController.doPrivileged(Native Method)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
 	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+2019-04-14 14:47:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CART" already exists; SQL statement:
+CREATE TABLE cart(
+                   salesID      BIGINT PRIMARY KEY,
+                   sku VARCHAR(255),
+                   quantity     VARCHAR(255),
+
+) [42101-199]
+2019-04-14 15:02:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * INVENTORY[*] "; SQL statement:
+select * inventory [42000-199]
+2019-04-14 15:38:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STOREID" not found; SQL statement:
+select price from game where sku='68681' and storeid = '1486' [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:205)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:134)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:78)
+	at Utilities.getStringValue(Utilities.java:266)
+	at Main.start(Main.java:293)
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:919)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$11(PlatformImpl.java:449)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(PlatformImpl.java:418)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:417)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+2019-04-14 15:43:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE SALE CHANGE COLUMN 'GAMESKU'[*] TO 'PRICE' "; expected "identifier"; SQL statement:
+Alter table sale change column 'GAMESKU' TO 'PRICE' [42001-199]
+2019-04-14 15:45:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE SALE CHANGE COLUMN 'GAMESKU'[*] 'PRICE' "; expected "identifier"; SQL statement:
+Alter table sale change column 'GAMESKU' 'PRICE' [42001-199]
+2019-04-14 15:45:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE SALE MODIFY COLUMN 'GAMESKU'[*] 'PRICE' "; expected "identifier"; SQL statement:
+Alter table sale MODIFY column 'GAMESKU' 'PRICE' [42001-199]
