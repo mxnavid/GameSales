@@ -1,34 +1,28 @@
 import java.io.File;
 import java.sql.Connection;
 import java.util.Scanner;
-import java.util.*;
 
 public class Main {
 
     private static final File databaseFile = new File("database/gamesales.mv.db");
-    private static final File databasePath = new File("database/gamesales.sql");
 
     private static Connection connection;
 
     private static String input = "-2";
     private static Scanner s = new Scanner(System.in);
-    private static String user;
-    private static String password;
-    private static String inputtedUser;
-    private static String inputtedPassword;
-
 
     public static void init() {
         connection = gameUtil.connect(connection, databaseFile.getAbsolutePath(), "admin", "password");
-        //gameUtil.printCusomterTable(connection);
-
+//        gameUtil.fillDatabase(connection);
     }
 
+
+    /**
+     * Main Functionality for Command Line Interface
+     * @param args
+     */
     public static void main(String[] args) {
 
-//        System.out.println("I am test");
-
-        // initialize database connection elements
         init();
 
         System.out.println("Welcome to GameStop! Login or Create an Account. (-1 to exit)");
@@ -49,7 +43,6 @@ public class Main {
                 case "3":
                     storePanel.storeWorks(s, connection);
                     break;
-
 
                 case "4":
                    customerPanel.createNewAccount(s, connection);

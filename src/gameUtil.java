@@ -16,7 +16,14 @@ import java.util.concurrent.locks.StampedLock;
 
 public class gameUtil {
 
-
+    /**
+     * Connection Initiator
+     * @param connection
+     * @param location
+     * @param username
+     * @param password
+     * @return
+     */
     public static Connection connect(Connection connection, String location, String username, String password) {
         try {
             Class.forName("org.h2.Driver");
@@ -44,7 +51,12 @@ public class gameUtil {
         }
     }
 
-    // from csv
+    /**
+     * Create Customer Table
+     * @param connection
+     * @param fileName
+     * @throws SQLException
+     */
     public static void createCustomerTable(Connection connection, String fileName) throws SQLException {
         System.out.println("CreateCustomerTable Called");
         List<Customer> customers = new ArrayList<Customer>();
@@ -70,6 +82,11 @@ public class gameUtil {
 
     }
 
+    /**
+     * Add Customer
+     * @param connection
+     * @param customer
+     */
     public static void addCustomer(Connection connection, Customer customer) {
         System.out.println("Adding Customer Called");
         String command = String.format("INSERT INTO CUSTOMER " +
@@ -106,6 +123,12 @@ public class gameUtil {
         }
     }
 
+    /**
+     * Add Game
+     * @param connection
+     * @param game
+     * @param counter
+     */
     public static void addGames(Connection connection, Game game, int counter) {
         System.out.printf("Adding Games Now %d \n", counter);
         String command = String.format("INSERT INTO GAME " +
@@ -121,6 +144,12 @@ public class gameUtil {
         }
     }
 
+    /**
+     * Create Game Table
+     * @param connection
+     * @param fileName
+     * @throws SQLException
+     */
     public static void createGameTable(Connection connection, String fileName) throws SQLException {
         System.out.println("Create GameTable called");
         List<Game> games = new ArrayList<Game>();
@@ -146,6 +175,12 @@ public class gameUtil {
         System.out.println("Dont writing");
     }
 
+    /**
+     * add Vendor
+     * @param connection
+     * @param vendor
+     * @param counter
+     */
     public static void addVendor(Connection connection, Vendor vendor, int counter) {
         System.out.printf("Adding Vendors Counter = %d \n", counter);
         String command = String.format("INSERT INTO VENDOR " +
@@ -164,6 +199,12 @@ public class gameUtil {
         }
     }
 
+    /**
+     * Create Vendor table
+     * @param connection
+     * @param fileName
+     * @throws SQLException
+     */
     public static void createVendorTable(Connection connection, String fileName) throws SQLException{
         System.out.println("Create Vandor Table");
         List<Vendor> vendors = new ArrayList<Vendor>();
@@ -187,6 +228,12 @@ public class gameUtil {
         }
     }
 
+    /**
+     * Add Store
+     * @param connection
+     * @param store
+     * @param counter
+     */
     public static void addStore(Connection connection, Store store, int counter) {
         System.out.printf("Adding Stores Now counter = %d \n", counter);
         String command = String.format("INSERT INTO STORE " +
@@ -201,6 +248,12 @@ public class gameUtil {
         }
     }
 
+    /**
+     * Create Store table
+     * @param connection
+     * @param fileName
+     * @throws SQLException
+     */
     public static void createStoreTable(Connection connection, String fileName) throws SQLException {
         System.out.println("Create Store Table Executed");
         List<Store> stores = new ArrayList<Store>();
@@ -221,11 +274,22 @@ public class gameUtil {
 
     }
 
+    /**
+     * Log Geenrator
+     * @param prefix
+     * @param message
+     */
     public static void log(String prefix, String message) {
         String time = String.format("("+ prefix+ ") [%1$tH:%1$tM:%1$tS] ", new Date());
         System.out.println(time + message);
     }
 
+    /**
+     * Carry out the SQL Statement
+     * @param connection connection
+     * @param command command
+     * @return ResultSet
+     */
     public static ResultSet executeSQLCommand(Connection connection, String command){
         try{
             Statement st = connection.createStatement();
@@ -242,6 +306,12 @@ public class gameUtil {
         return null;
     }
 
+    /**
+     * Counts Number of Rows
+     * @param connection connection
+     * @param command SQL Command
+     * @return
+     */
     public static int counter(Connection connection, String command){
         try{
             Statement st = connection.createStatement();
@@ -257,6 +327,12 @@ public class gameUtil {
         return 0;
     }
 
+    /**
+     * Get the value from SQL Command
+     * @param connection connection
+     * @param command SQL Statement
+     * @return
+     */
     public static String getStringValue(Connection connection, String command){
 
         //select username from customer where username = 'you@me.com'
@@ -275,14 +351,8 @@ public class gameUtil {
 
     }
 
-    public static void filterTable(Connection connection, String tbName, String cName, String filter){
-        String command = "select * from " + tbName + " where " +cName + " =" + "'"+filter+"'";
-        executeSQLCommand(connection, command);
-    }
 
-//    public static void updateValue(Connection connection, String tableName, String columnName, String value, String condition){
-//        String update = "UPDATE '" + tableName + "' SET '" + columnName + "' = '" + value + "' where " + condition
-//    }
+
 }
 
 
