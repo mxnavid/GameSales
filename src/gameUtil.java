@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.locks.StampedLock;
 
-public class Utilities {
+public class gameUtil {
 
 
     public static Connection connect(Connection connection, String location, String username, String password) {
